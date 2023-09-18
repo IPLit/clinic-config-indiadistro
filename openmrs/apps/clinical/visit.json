@@ -5,17 +5,18 @@
         "printing": {
             "title": "Bahmni",
             "header": "Visit",
-            "logo": "../images/bahmniLogo.png"
+            "logo": "../images/visitPrintHeader.png"
         },
         "defaultSections": true,
         "defaultSectionsExcludes": ["admissionDetails"],
         "sections": {
-            "pivotTable":{
-                "type": "pivotTable",
+            "vitalsTable":{
+                "type": "vitalsTable",
                 "displayOrder": 0,
                 "title": "Vitals Flowsheet",
                 "config": {
-                    "groupBy": "obstime",
+                    "showGroupDateTime": false,
+                    "scope": "latest",
                     "obsConcepts": [
                         "Pulse",
                         "Diastolic blood pressure",
@@ -74,7 +75,7 @@
         "printing": {
             "title": "Bahmni",
             "header": "Patient Visit Summary",
-            "logo": "../images/bahmniLogo.png"
+            "logo": "../images/visitPrintHeader.png"
         },
         "sections": {
             "Patient Information": {
