@@ -359,16 +359,4 @@
         </sql>
     </changeSet>
 
-    <changeSet id="202310061430" author="iplit" runAlways="true">
-	<preConditions onFail="MARK_RAN">
-		<sqlCheck expectedResult="1">
-			select count(*) from scheduler_task_config where name = 'OpenElis Patient Atom Feed Task' and start_on_startup = 1;
-		</sqlCheck>
-	</preConditions>
-	<comment> Disable 'OpenElis Patient Atom Feed Task' scheduler task as clinical-config doesn't have openelis module </comment>
-	<sql>
-		UPDATE scheduler_task_config set start_on_startup=0, started=0 where name = 'OpenElis Patient Atom Feed Task';
-	</sql>
-    </changeSet>
-
 </databaseChangeLog>
