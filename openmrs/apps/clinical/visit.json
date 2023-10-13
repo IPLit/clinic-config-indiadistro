@@ -19,8 +19,7 @@
                     "scope": "latest",
                     "obsConcepts": [
                         "Pulse",
-                        "Diastolic blood pressure",
-                        "Systolic blood pressure",
+                        "Blood Pressure",
                         "Temperature",
                         "Respiratory rate",
                         "Arterial blood oxygen saturation (pulse oximeter)",
@@ -58,7 +57,7 @@
                     "showListView":true,
                     "showRoute":true,
                     "showDrugForm":true,
-                    "numberOfVisits":5,
+                    "numberOfVisits":1,
                     "showOtherActive":true
                 }
             }
@@ -85,43 +84,37 @@
                     "translationKey": "VISIT_TITLE_PATIENT_INFORMATION"
                 }
             },
-            "vitals":{
-                "type":"vitals",
-                "translationKey":"DASHBOARD_TITLE_VITALS_KEY",
-                "displayOrder":1,
-                "config":{
-                    "conceptNames":[
+            "vitalsTable":{
+                "type": "vitalsTable",
+                "displayOrder": 1,
+                "title": "Vitals Flowsheet",
+                "config": {
+                    "showGroupDateTime": false,
+                    "scope": "latest",
+                    "obsConcepts": [
+                        "Pulse",
+                        "Blood Pressure",
+                        "Temperature",
+                        "Respiratory rate",
+                        "Arterial blood oxygen saturation (pulse oximeter)",
                         "Height (cm)",
                         "Weight (kg)",
-                        "Pulse",
-                        "Arterial blood oxygen saturation (pulse oximeter)",
-                        "Respiratory rate",
-                        "Temperature",
-                        "Systolic blood pressure",
-                        "Diastolic blood pressure",
-                        "Body position"
+                        "M/C Days"
                     ],
-                    "numberOfVisits":1
+                    "numberOfVisits": 1,
+                    "labConcepts": ""
                 }
             },
-            "consultationNotes":{
-                "type":"consultationNotes",
-                "translationKey":"DASHBOARD_TITLE_CONSULTATION_NOTES_KEY",
-                "displayOrder":2,
-                "config":{
-                    "conceptNames":[
-                        "Chief Complaint Data",
-                        "History of present illness",
-                        "Smoking status",
-                        "Consultation Note"
-                    ],
-                    "numberOfVisits":2
-                }
+            "conditions": {
+                "title": "Conditions",
+                "type": "conditionsList",
+                "displayOrder": 3,
+                "config": { }
             },
             "diagnosis":{
                 "type":"diagnosis",
                 "translationKey":"DASHBOARD_TITLE_DIAGNOSIS_KEY",
-                "displayOrder":3,
+                "displayOrder":2,
                 "config": {
                     "hideVisitDate": true,
                     "showCertainty": true
@@ -133,12 +126,12 @@
                 "config": {
                     "translationKey": "VISIT_TITLE_LAB_ORDERS_KEY",
                     "showChart": true,
-                    "showTable": false,
+                    "showTable": true,
                     "showOrders": true,
                     "showNormalLabResults": false,
                     "showCommentsExpanded": false,
                     "showAccessionNotes": true,
-                    "numberOfVisits": 10,
+                    "numberOfVisits": 1,
                     "showDetailsButton": false,
                     "hideVisitDate": true
                 }
@@ -146,6 +139,7 @@
             "radiologyOrderControl":  {
                 "type": "order",
                 "title": "Radiology Order",
+                "displayOrder": 5,
                 "config": {
                     "title": "Radiology Order",
                     "name": "ordersControl",
@@ -156,7 +150,7 @@
             "prescriptions":{
                 "translationKey":"DASHBOARD_TITLE_PRESCRIPTIONS_KEY",
                 "type":"prescription",
-                "displayOrder":5,
+                "displayOrder":6,
                 "hideVisitDate": true,
                 "config":{
                     "hideVisitDate": true,
@@ -164,18 +158,48 @@
                     "showListView":true,
                     "showRoute":true,
                     "showDrugForm":true,
-                    "numberOfVisits":5,
+                    "numberOfVisits":1,
                     "showOtherActive":true
+                }
+            },
+            "consultationNotes":{
+                "type":"consultationNotes",
+                "translationKey":"DASHBOARD_TITLE_CONSULTATION_NOTES_KEY",
+                "displayOrder":7,
+                "config":{
+                    "conceptNames":[
+                        "Chief Complaint Data",
+                        "History of present illness",
+                        "Smoking status",
+                        "Consultation Note"
+                    ],
+                    "numberOfVisits": 1
+                }
+            },
+            "handNotes":{
+                "type":"handNotes",
+                "translationKey":"VISIT_TITLE_HANDNOTES_KEY",
+                "displayOrder":8,
+                "config":{
+                    "type": "handNotes",
+                    "isObservation": true,
+                    "showGroupDateTime":false,
+                    "isObservationForImages":true,
+                    "persistOrderOfObsDateTime":true,
+                    "conceptNames":[
+                        "Image Note"
+                    ],
+                    "numberOfVisits": 1
                 }
             },
             "followUp": {
                 "type": "followUp",
                 "translationKey": "DASHBOARD_TITLE_FOLLOWUP_KEY",
-                "displayOrder":6,
+                "displayOrder":9,
                 "config": {
                     "conceptNames":[
                         "Return visit date",
-                        "Reason for visit"
+                        "Reason for visit (text)"
                     ]
                 }
             }
