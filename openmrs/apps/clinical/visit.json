@@ -58,7 +58,7 @@
                     "showRoute":true,
                     "showDrugForm":true,
                     "numberOfVisits":1,
-                    "showOtherActive":true
+                    "showOtherActive":false
                 }
             }
         },
@@ -159,7 +159,7 @@
                     "showRoute":true,
                     "showDrugForm":true,
                     "numberOfVisits":1,
-                    "showOtherActive":true
+                    "showOtherActive":false
                 }
             },
             "consultationNotes":{
