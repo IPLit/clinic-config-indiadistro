@@ -167,6 +167,7 @@
                 "translationKey":"DASHBOARD_TITLE_CONSULTATION_NOTES_KEY",
                 "displayOrder":7,
                 "config":{
+                    "showGroupDateTime": false,
                     "conceptNames":[
                         "Chief Complaint Data",
                         "History of present illness",
@@ -197,6 +198,7 @@
                 "translationKey": "DASHBOARD_TITLE_FOLLOWUP_KEY",
                 "displayOrder":9,
                 "config": {
+                    "showGroupDateTime":false,
                     "conceptNames":[
                         "Return visit date",
                         "Reason for visit (text)"
