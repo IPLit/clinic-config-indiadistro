@@ -13,7 +13,7 @@
             "vitalsTable":{
                 "type": "vitalsTable",
                 "displayOrder": 0,
-                "title": "Vitals Flowsheet",
+                "title": "Vitals",
                 "config": {
                     "showGroupDateTime": false,
                     "scope": "latest",
@@ -87,7 +87,7 @@
             "vitalsTable":{
                 "type": "vitalsTable",
                 "displayOrder": 1,
-                "title": "Vitals Flowsheet",
+                "title": "Vitals",
                 "config": {
                     "showGroupDateTime": false,
                     "scope": "latest",
@@ -113,9 +113,9 @@
             },
             "diagnosis":{
                 "type":"diagnosis",
-                "translationKey":"DASHBOARD_TITLE_DIAGNOSIS_KEY",
                 "displayOrder":2,
                 "config": {
+                    "translationKey": "DASHBOARD_TITLE_DIAGNOSIS_KEY",
                     "hideVisitDate": true,
                     "showCertainty": true
                 }
