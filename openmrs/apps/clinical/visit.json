@@ -18,8 +18,9 @@
                     "showGroupDateTime": false,
                     "scope": "latest",
                     "obsConcepts": [
+                        "Diastolic blood pressure",
+                        "Systolic blood pressure",
                         "Pulse",
-                        "Blood Pressure",
                         "Temperature",
                         "Respiratory rate",
                         "Arterial blood oxygen saturation (pulse oximeter)",
@@ -28,6 +29,15 @@
                         "M/C Days"
                     ],
                     "labConcepts": ""
+                }
+            },
+            "diagnosis": {
+                "type":"diagnosis",
+                "config": {
+                    "translationKey": "DASHBOARD_TITLE_DIAGNOSIS_KEY",
+                    "hideVisitDate": true,
+                    "showCertainty": true,
+                    "notOnDashboard": true
                 }
             },
             "conditions": {
@@ -92,8 +102,9 @@
                     "showGroupDateTime": false,
                     "scope": "latest",
                     "obsConcepts": [
+                        "Diastolic blood pressure",
+                        "Systolic blood pressure",
                         "Pulse",
-                        "Blood Pressure",
                         "Temperature",
                         "Respiratory rate",
                         "Arterial blood oxygen saturation (pulse oximeter)",
@@ -117,7 +128,8 @@
                 "config": {
                     "translationKey": "DASHBOARD_TITLE_DIAGNOSIS_KEY",
                     "hideVisitDate": true,
-                    "showCertainty": true
+                    "showCertainty": true,
+                    "notOnDashboard": true
                 }
             },
             "labOrders": {
