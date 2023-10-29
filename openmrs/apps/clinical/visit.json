@@ -31,15 +31,6 @@
                     "labConcepts": ""
                 }
             },
-            "diagnosis": {
-                "type":"diagnosis",
-                "config": {
-                    "translationKey": "DASHBOARD_TITLE_DIAGNOSIS_KEY",
-                    "hideVisitDate": true,
-                    "showCertainty": true,
-                    "notOnDashboard": true
-                }
-            },
             "conditions": {
                 "title": "Conditions",
                 "type": "conditionsList",
@@ -68,7 +59,8 @@
                     "showRoute":true,
                     "showDrugForm":true,
                     "numberOfVisits":1,
-                    "showOtherActive":false
+                    "showOtherActive":false,
+                    "notOnDashboard": true
                 }
             }
         },
@@ -171,7 +163,8 @@
                     "showRoute":true,
                     "showDrugForm":true,
                     "numberOfVisits":1,
-                    "showOtherActive":false
+                    "showOtherActive":false,
+                    "notOnDashboard": true
                 }
             },
             "consultationNotes":{
