@@ -252,7 +252,23 @@
                 },
                 "displayOrder":10,
                 "title":"Patient Document"
-            }
+            },
+            "handnotes":{
+                "type":"handnotes",
+                "translationKey":"DASHBOARD_TITLE_HAND_NOTES_KEY",
+                "isObservation":true,
+                "displayType":"Half-Page",
+                "displayOrder":15,
+                "dashboardConfig":{
+                    "showGroupDateTime":false,
+                    "isObservationForImages":true,
+                    "persistOrderOfObsDateTime":true,
+                    "conceptNames":[
+                         "Image Note"
+                    ],
+                    "numberOfVisits":2
+                }
+          }
         }
     },
     "print": {

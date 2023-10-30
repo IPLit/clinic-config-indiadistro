@@ -27,6 +27,8 @@
             "additionalPatientIdentifiers": [
                 "ABHA Address"
             ]
-        }
+        },
+        "getPreviousVisitData": true,
+        "previousVisitConceptNamesToPull": ["Notes"]
     }
 }
