@@ -111,12 +111,12 @@
             "conditions": {
                 "title": "Conditions",
                 "type": "conditionsList",
-                "displayOrder": 3,
+                "displayOrder": 4,
                 "config": { }
             },
             "diagnosis":{
                 "type":"diagnosis",
-                "displayOrder":2,
+                "displayOrder":3,
                 "config": {
                     "translationKey": "DASHBOARD_TITLE_DIAGNOSIS_KEY",
                     "hideVisitDate": true,
@@ -126,7 +126,7 @@
             },
             "labOrders": {
                 "type": "labOrders",
-                "displayOrder": 4,
+                "displayOrder": 7,
                 "config": {
                     "translationKey": "VISIT_TITLE_LAB_ORDERS_KEY",
                     "showChart": true,
@@ -143,7 +143,7 @@
             "radiologyOrderControl":  {
                 "type": "order",
                 "title": "Radiology Order",
-                "displayOrder": 5,
+                "displayOrder": 8,
                 "config": {
                     "title": "Radiology Order",
                     "name": "ordersControl",
@@ -170,7 +170,7 @@
             "consultationNotes":{
                 "type":"consultationNotes",
                 "translationKey":"DASHBOARD_TITLE_CONSULTATION_NOTES_KEY",
-                "displayOrder":7,
+                "displayOrder":2,
                 "config":{
                     "showGroupDateTime": false,
                     "conceptNames":[
@@ -185,7 +185,7 @@
             "handNotes":{
                 "type":"handNotes",
                 "translationKey":"VISIT_TITLE_HANDNOTES_KEY",
-                "displayOrder":8,
+                "displayOrder":5,
                 "config":{
                     "type": "handNotes",
                     "isObservation": true,
