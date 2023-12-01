@@ -110,7 +110,7 @@
   "NAVIGATE_TO_ADMISSION_LETTER_FORM": "Consultation > Observation forms > Admission Letter.",
   "NAVIGATE_TO_REFERRAL_LETTER_FORM": "Consultation > Observation forms > Referral Letter.",
   "REFERRAL_LETTER": "Referral Letter",
-  "REFERRAL_LETTER_REFERRAL_TO":"Referral to:",
+  "REFERRAL_LETTER_REFERRAL_TO": "To:",
   "REFERRAL_LETTER_NAME_OF_PATIENT": "Name of patient:",
   "REFERRAL_LETTER_AGE": "Age:" ,
   "REFERRAL_LETTER_YEARS": "years",
@@ -119,6 +119,11 @@
   "REFERRAL_LETTER_REASON_FOR_REFERRAL": "Reason for referral: ",
   "REFERRAL_LETTER_RELEVANT_CLINICAL_HISTORY":"Relevant Clinical History: ",
   "REFERRAL_LETTER_TREATMENT":"Treatment/Observations: ",
-  "REFERRAL_SIGNATURE": "Signature: "
+  "REFERRAL_SIGNATURE": "Signature: ",
+  "MTP_CERTIFICATE":"MTP CERTIFICATE",
+  "NAVIGATE_TO_MTP_LETTER_FORM":"Consultation > Observation forms > MTP Letter.",
+  "Form l and Form C":"form l and form c",
+  "NAVIGATE_TO_MTP_Form l and Form C letter_form":"Consultation > Observation forms > Form l and Form C letter",
+  "REFERRAL_LETTER_C/o_(Remarks)":"C/o (Remarks): "
 
 }
