@@ -171,6 +171,16 @@ angular.module('bahmni.common.displaycontrol.custom')
                 }
                 return str[0].toUpperCase() + str.slice(1).toLowerCase();
             }
+
+            $scope.getReferredTo = function() {
+                if ($scope.formFieldValues !== undefined &&
+                  $scope.formFieldValues[2] !== undefined &&
+                  $scope.formFieldValues[2]['Referred to'] !== undefined) {
+                    var ReferredTo = $scope.formFieldValues[2]['Referred to'];
+                    return ReferredTo.replace(/<br \/>/g, '\n');
+                }
+            };
+
             $scope.patientAddress.line1 = buildAddress($scope.patient.address, patientAddress.line1)
             $scope.patientAddress.line2 = buildAddress($scope.patient.address, patientAddress.line2)
             $scope.printCertificate = function (printId) {
