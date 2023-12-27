@@ -173,7 +173,8 @@
                     "showDetailsButton":true,
                     "pivotTable":{
                     }
-                }
+                },
+                "hideEmptyDisplayControl":true
             },
             "patientAppointments": {
                 "type": "custom",
@@ -196,8 +197,10 @@
                         "BMI Status"
                     ],
                     "showDetailsButton":true,
-                    "numberOfVisits":2
-                }
+                    "numberOfVisits":2,
+                    "displayNameType": "FSN"
+                },
+                "hideEmptyDisplayControl":true
             },
 
             "forms-2.0": {
