@@ -5,7 +5,8 @@
         "printing": {
             "title": "Bahmni",
             "header": "Visit",
-            "logo": "../images/visitPrintHeader.png"
+            "logo": "../images/visitPrintHeader.png",
+            "headerUri": "/bahmni/images/visitPrintHeader.png"
         },
         "defaultSections": true,
         "defaultSectionsExcludes": ["admissionDetails"],
