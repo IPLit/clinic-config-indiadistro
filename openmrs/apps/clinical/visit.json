@@ -77,7 +77,8 @@
         "printing": {
             "title": "Bahmni",
             "header": "Patient Visit Summary",
-            "logo": "../images/visitPrintHeader.png"
+            "logo": "../images/visitPrintHeader.png",
+            "headerUri": "/bahmni/images/visitPrintHeader.png"
         },
         "sections": {
             "Patient Information": {
