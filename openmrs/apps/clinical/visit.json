@@ -6,7 +6,10 @@
             "title": "Bahmni",
             "header": "Visit",
             "logo": "../images/visitPrintHeader.png",
-            "headerUri": "/bahmni/images/visitPrintHeader.png"
+            "headerUri": "/bahmni/images/visitPrintHeader.png",
+            "forms": ["History and Examination", "Consultation Note"],
+            "vitals": ["Systolic blood pressure", "Diastolic blood pressure", "Height (cm)", "Weight (kg)"],
+            "obsIgnoreList": ["Radiology", "Document", "Follow-up Condition", "Return visit date", "Reason for visit (text)"]
         },
         "defaultSections": true,
         "defaultSectionsExcludes": ["admissionDetails"],
@@ -78,7 +81,10 @@
             "title": "Bahmni",
             "header": "Patient Visit Summary",
             "logo": "../images/visitPrintHeader.png",
-            "headerUri": "/bahmni/images/visitPrintHeader.png"
+            "headerUri": "/bahmni/images/visitPrintHeader.png",
+            "forms": ["History and Examination", "Consultation Note"],
+            "vitals": ["Systolic blood pressure", "Diastolic blood pressure", "Height (cm)", "Weight (kg)"],
+            "obsIgnoreList": ["Radiology", "Document", "Follow-up Condition", "Return visit date", "Reason for visit (text)"]
         },
         "sections": {
             "Patient Information": {
