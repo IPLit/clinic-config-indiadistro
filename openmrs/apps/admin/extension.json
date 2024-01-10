@@ -46,6 +46,19 @@
         "icon": "fa-upload",
         "order": 1,
         "requiredPrivilege": "app:admin"
+    },
+    "storage":{
+        "id": "bahmni.admin.storage",
+        "extensionPointId": "org.bahmni.admin.dashboard",
+        "type": "link",
+        "extensionParams": {
+        },
+        "label": "Storage",
+        "url": "#/storageCount",
+        "icon": "fa-database",
+        "order": 1,
+        "requiredPrivilege": "app:admin"
     }
+
     
 }
