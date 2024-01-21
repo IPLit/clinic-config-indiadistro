@@ -10,7 +10,7 @@
     "showTitleText": false
   },
   "helpLink": {
-    "url": "https://bahmni.atlassian.net/wiki/display/BAH/Bahmni+Home"
+    "url": "https://mydesk.iplit.in"
   },
   "landingPage": [
     {
@@ -61,6 +61,13 @@
       "title": "Analytics",
       "logo": "/bahmni/images/analytics.png",
       "link": "/metabase"
+    },
+    {
+        "enabled": false,
+        "name": "dcm",
+        "title": "dcm4chee-web3",
+        "logo": "/bahmni/images/pac.png",
+        "link": "/dcm4chee-web3"
     }
   ]
 }
