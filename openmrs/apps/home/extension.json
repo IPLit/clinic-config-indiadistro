@@ -113,5 +113,15 @@
     "order": 11,
     "target": "_blank",
     "requiredPrivilege": "app:abdm"
+  },
+  "claims": {
+    "id": "bahmni.claims",
+    "extensionPointId": "org.bahmni.home.dashboard",
+    "type": "link",
+    "translationKey": "MODULE_LABEL_CLAIMS_KEY",
+    "url": "/opd",
+    "icon": "fa fa-leanpub",
+    "order": 12,
+    "target": "_blank"
   }
 }
