@@ -9,6 +9,9 @@
         }
     ],
     "config" : {
+        "readOnlyFields": ["FileNumber"],
+        "uniquePersonAttribute": "FileNumber",
+        "uniquePersonAttributeErrorText": "Please specify unique File number",
         "mandatoryPersonAttributes" : ["phoneNumber"],
         "patientInformation": {},
         "defaultIdentifierPrefix": "ABC",
