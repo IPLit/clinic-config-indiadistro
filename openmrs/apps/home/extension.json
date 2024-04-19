@@ -123,6 +123,6 @@
     "icon": "fa fa-leanpub",
     "order": 12,
     "target": "_blank",
-    "requiredPrivilege": "app:clinical"
+    "requiredPrivilege": "app:admin"
   }
 }
