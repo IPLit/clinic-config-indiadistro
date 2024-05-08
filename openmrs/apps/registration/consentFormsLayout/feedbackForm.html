@@ -7,32 +7,29 @@
                        class="logo"/></h1>
         </div>
     </div>
-    <!-- <div class="row"> -->
-    <!-- <br/> -->
-    <!-- </div> -->
-    <div class="row" style="width:90%;vertical-align:middle;">
-        <span class="right" style="text-align:right;float:right;">
+    <div class="row">
+        <div class="left">
+            <span><img ng-src="{{patient.image}}" style="width: 20mm; height: 13mm;" onerror="this.onerror=null;this.src='../images/blank.jpeg';"/></span>
+        </div>
+        <div class="right" style="text-align: right;">
             <span class="label">Date:</span>
             <span>{{today | date:'dd/MM/yyyy'}} </span>
             <span class="label">Time:</span>
             <span>{{today | date:'HH:MM'}}</span>
-        </span>
-        <span class="left" style="text-align:left;">
-            <span><img ng-src="{{patient.image}}" style="width: 20mm; height: 13mm;" onerror="this.onerror=null;this.src='../images/blank.jpeg';"/></span>
-        </span>
+        </div>
     </div>
-<font size="2"> 
-<div class="right">
-<table border="0" style="border:1px solid black; border-collapse: collapse" width="700">
+<div class="row">
+<font size="2"/> 
+<div style="clear:both;">
+<table border="0" align="center" style="border:1px solid black; border-collapse: collapse;" width="700">
 <tbody>
-
 <tr>
 <td width="275">
             <span class="label">&nbsp;Patient Name:</span>
             <span class="capitalize"><b>{{patient.givenName}} {{patient.middleName}} {{patient.familyName}}</b></span> 
 </td>
 <td width="285">
-Room No.:______________________&nbsp;&nbsp;Surgery:______________________
+<span class="label">&nbsp;Room No.:</span>__________________&nbsp;<span class="label">Surgery:</span>__________________
 </td>
 </tr>
 <tr>
@@ -41,8 +38,8 @@ Room No.:______________________&nbsp;&nbsp;Surgery:______________________
             <span>{{patient.primaryIdentifier.identifier}}</span>
 </td>
 <td width="450">
-<span class="label">&nbsp;Occupation:</span>
-             <span>{{patient.occupation.value}}</span>
+    <span class="label">&nbsp;Occupation:</span>
+    <span ng-if="patient.occupation">{{patient.occupation.value}}</span>
 </td>
 </tr>
 <tr><td width="275">
@@ -52,11 +49,10 @@ Room No.:______________________&nbsp;&nbsp;Surgery:______________________
 
 </td>
 <td width="275">
-<span class="label">&nbsp;Mobile No:</span>
-            <span>{{patient.mobileNo}}</span>&nbsp;
+    <span class="label">&nbsp;Mobile No:</span>
+    <span>{{patient.phoneNumber}}</span>
 </td>
 </tr>
-
 <tr><td width="275">
 <span class="label">&nbsp;Address:</span>
             <span>{{patient.address.address1}}</span>&nbsp;
@@ -64,60 +60,56 @@ Room No.:______________________&nbsp;&nbsp;Surgery:______________________
             <span>&nbsp;{{patient.address.cityVillage}}</span>
             <span>&nbsp;-&nbsp;{{patient.address.postalCode}}</span></td>
 <td width="305">
-Period Of Stay______________________&nbsp;to&nbsp;______________________
+<span class="label">Period Of Stay:</span>__________________&nbsp;<span class="label">to:</span>__________________
 </td>
 </tr>
-
-
 </tbody>
 </table>    
 </div>
-<div class="row">
-     <p>
-     <span><h2 style="text-align: center;">Patient Feedback Form</h2></p>
 </div>
 <div class="row">
-<font size="3">
-<strong>
+     <span><h2 style="text-align: center;">Patient Feedback Form</h2></span>
 </div>
-
-
-<font size="2">
 <div class="row">
+<font size="2"/>
 <table border="1" style="border:1px solid white; border-collapse: collapse">
 <tbody>
-<tr><td width="">1.OPD Services</td><td>Excellent</td><td>Good</td><td>Average</td><td>Satisfactory</td><td>Poor</td></tr>
+<tr><td width=""><b>1.OPD Services</b></td><td>Excellent</td><td>Good</td><td>Average</td><td>Satisfactory</td><td>Poor</td></tr>
 <tr><td width="275">a.Explanation of Registration process, hospital services and charges</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td></tr>
 <tr><td width="500">b.Time taken for admission procedure</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td></tr>
 <tr><td width="500">c. Overall attitude of frontdesk staff</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td></tr><tr><br></tr>
-<tr><td width="500">2.Doctors</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td></tr>
+<tr><td width="500"><b>2.Doctors</b></td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td></tr>
 <tr><td width="500">a.Explanation about your condition,procedure and treatment</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td></tr>
 <tr><td width="500">b.Time taken to attend a problem</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td></tr>
 <tr><td width="500">c.Post-operative education and follow-ups</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td></tr>
 <tr><td width="500">d.Explanation about time of recovery & post discharge care</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td></tr>
 <tr><td width="500">e.Overall attitude of Doctors</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td></tr><tr><br></tr>
-<tr><td width="500">3.Nursing Care</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td></tr>
+<tr><td width="500"><b>3.Nursing Care</b></td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td></tr>
 <tr><td width="500">a.Nursing care given including medication, administration</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td></tr>
 <tr><td width="500">b.Privacy maintained by your nurse during procedure</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td></tr>
 <tr><td width="500">c.Time taken to attend your problem after calling</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td></tr>
 <tr><td width="500">d.Overall attitude of nursing staff</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td></tr>
 <tr><td width="500">e.Advise at the time pf discharge</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td></tr>
-<tr><td width="500">4.Hospitality</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td></tr>
+<tr><td width="500"><b>4.Hospitality</b></td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td></tr>
 <tr><td width="500">a.Cleanliness of rooms, wards and corridors</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td></tr>
 <tr><td width="500">b.Cleanliness of bathrooms & toilets</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td></tr>
 <tr><td width="500">c.Behaviour of housekeeping/ward staff</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td></tr>
 <tr><td width="500">d.Promptness of housekeeping/ward staff in attending your needs</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td></tr>
 <tr><td width="500">e.Rate billing/TPA Servicers</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td></tr>
 <tr><td width="500">f.Rate PRO's/Patient Care Coordinators services</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td></tr>
-<tr><td width="500">5.Rate dietitian Services</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td></tr>
-<tr><td width="500">6.Rate our overall quality of Services</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td></tr></tbody>
-</table><table><tbody>
-<tr><td>7.On the basis of present experience at our hospital, in future would you prefer to visit us for other health related issues? [Yes] [No] </td></tr>
-<tr><td width="500">8.Would you recommend our hospital to your friends and relatives? [Yes] [No]</td></tr>
+<tr><td width="500"><b>5.Rate dietitian Services</b></td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td></tr>
+<tr><td width="500"><b>6.Rate our overall quality of Services</b></td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td></tr>
+<!-- </tbody> -->
+<!-- </table> -->
+<!-- <table><tbody> -->
+<tr><td nowrap>7.On the basis of present experience at our hospital, in future would you prefer to visit us for other health related issues?&nbsp; [Yes] [No]</td></tr>
+<tr><td>8.Would you recommend our hospital to your friends and relatives?&nbsp; [Yes] [No]</td></tr>
 </tbody>
 </table>
 </div>
-</br></br></br>
+<!-- </br> -->
 <div class=row><p>Name of Cooperative staff:_____________________________ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name of Non-cooperative staff:_____________________________</p>
 <p>Suggestions:____________________________________________________________________________________________________</br>______________________________________________________________________________________________________________</br>______________________________________________________________________________________________________________</p>
+</br>
 <p>_________________________&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_________________________&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_________________________</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sign of P R O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Patient Sign</p>
+</div>
