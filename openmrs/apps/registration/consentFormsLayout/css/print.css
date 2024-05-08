@@ -1,3 +1,10 @@
+th {
+	font-size: x-large !important;
+	max-width: 530px !important;
+	width: 530px;
+	text-align: left !important;
+}
+
 .capitalize { 
 	text-transform: uppercase; 
 }
