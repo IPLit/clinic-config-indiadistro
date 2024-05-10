@@ -5,5 +5,6 @@
   "practitionerType": "practitioner_type",
   "providerIdentifier": "Doctor",
   "patientAddress": {"line1": ["address1","address2","address3"], "line2": ["cityVillage","countyDistrict","stateProvince","postalCode"]},
-  "addressAndLocationAttributes": "Print Header"
+  "addressAndLocationAttributes": "Print Header",
+  "printCertificateLines": ["PrintCertificateLineOne","PrintCertificateLineTwo"]
 }

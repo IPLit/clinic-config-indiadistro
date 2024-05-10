@@ -47,8 +47,7 @@
         <ul  class="form-field">
             <li>{{::"NAVIGATE_TO_REFERRAL_LETTER_FORM" | translate}}</li>
         </ul>
-    </ul>
-	
+    </ul>	
 	<hr class="break-line">
     <ul style="font-size: 14px;color: #000000">
         <li class="display-title">
@@ -61,9 +60,6 @@
             <li>{{::"NAVIGATE_TO_MTP_LETTER_FORM" | translate}}</li>
         </ul>
     </ul>
-
-
-
     <hr class="break-line">
     <ul style="font-size: 14px;color: #000000">
         <li class="display-title">
@@ -84,22 +80,6 @@
 			<h1><img src="../images/visitPrintHeader.png" width="100%"
                        class="logo"/></h1>
         </div>
-        <!-- <div class="right">
-           <span>
-
-               <h1 class="name text-center" >
-                {{ registeredClinicName  }}
-              </h1>
-             <span>
-              <h5 class="name text-center w-100">
-                <div class = 'w-70'>
-                  {{ registeredClinicAddress}}
-
-                  </div>
-              </h5>
-              </span>
-          </span>
-        </div> -->
     </div>
     <hr>
     <div style="clear: both;">
@@ -118,8 +98,10 @@
                 <p class="text-justify"  translate="UNDER_TREATMENT_CERTIFICATE_BODY_CONTENT" translate-values="{patient:{{patient}}, treatment: formFieldValues[0]['Treatment plan'], restDuration : formFieldValues[0]['Rest duration']}">
                 </p>
                 <p class="signature mt-2">{{::"REGARDS_LABEL" | translate}}</p>
-                <p class="signature"><b>{{doctorName}},</b></p>
+                <p class="signature"><b>Dr.&nbsp;{{doctorName}},</b></p>
                 <p class="signature">{{::"REG_NO_LABEL" | translate}} {{registrationNumber}}. </p>
+                <p class="signature">{{printCertificateLine1}}</p>
+                <p class="signature">{{printCertificateLine2}}</p>
             </font>
         </div>
     </div>
@@ -131,22 +113,6 @@
             <h1><img src="../images/visitPrintHeader.png" width="100%"
                        class="logo"/></h1>
         </div>
-        <!-- <div class="right">
-           <span>
-
-               <h1 class="name text-center" >
-                {{ registeredClinicName  }}
-              </h1>
-             <span>
-              <h5 class="name text-center w-100">
-                <div class = 'w-70'>
-                  {{ registeredClinicAddress}}
-
-                  </div>
-              </h5>
-              </span>
-          </span>
-        </div> -->
     </div>
     <hr>
     <div style="clear: both;">
@@ -164,33 +130,20 @@
                 <h3 class="text-center">{{::"CERTIFICATE_SUBJECT_1" | translate}}</h3>
                 <p class="text-justify" translate="FITNESS_CERTIFICATE_BODY_CONTENT" translate-values="{patient:{{patient}}, treatment: formFieldValues[0]['Treatment plan']}"></p>
                 <p class="signature mt-2" >{{::"REGARDS_LABEL" | translate}}</p>
-                <p class="signature"><b>{{doctorName}},</b></p>
+                <p class="signature"><b>Dr.&nbsp;{{doctorName}},</b></p>
                 <p class="signature">{{::"REG_NO_LABEL" | translate}} {{registrationNumber}}. </p>
+                <p class="signature">{{printCertificateLine1}}</p>
+                <p class="signature">{{printCertificateLine2}}</p>
             </font>
         </div>
     </div>
+
     <div id="admission-certificate" class="no-print">
         <div class="row space-centre position-relative">
             <div class="print-header" align="center">
 				<h1><img src="../images/visitPrintHeader.png" width="100%"
                        class="logo"/></h1>
             </div>
-            <!-- <div class="right">
-           <span>
-
-               <h1 class="name text-center" >
-                {{ registeredClinicName  }}
-              </h1>
-             <span>
-              <h5 class="name text-center w-100">
-                <div class = 'w-70'>
-                  {{ registeredClinicAddress}}
-
-                  </div>
-              </h5>
-              </span>
-          </span>
-            </div> -->
         </div>
         <hr>
         <div style="clear: both;">
@@ -205,46 +158,29 @@
             </div>
             <div>
                 <font size="3">
-
                     <p class="text-justify" translate="ADMISSION_CERTIFICATE_BODY_CONTENT" translate-values="{patient:{{patient}},ReferredtoDoctor: formFieldValues[1]['Referred to Doctor'], referredToHospital: formFieldValues[1]['Referring to Hospital'], comments: formFieldValues[1]['Comments']}"></p>
-
                     <p class="mt-2">{{::"THANKYOU_LABEL" | translate}}</p>
-                    <p class="signature"><b>{{doctorName}},</b></p>
+                    <p class="signature"><b>Dr.&nbsp;{{doctorName}},</b></p>
                     <p class="signature">{{::"REG_NO_LABEL" | translate}} {{registrationNumber}}. </p>
+                    <p class="signature">{{printCertificateLine1}}</p>
+                    <p class="signature">{{printCertificateLine2}}</p>
                 </font>
             </div>
         </div>
     </div>
+
     <!----referral letter--->
-    
 	<div id="referral-letter" class="no-print">
         <div class="row space-centre position-relative ">
             <div class="print-header" align="center">
 				<h1><img src="../images/visitPrintHeader.png" width="100%"
                        class="logo"/></h1>
             </div>
-            <!-- <div class="right">
-           <span>
-
-               <h1 class="name text-center" >
-                {{ registeredClinicName  }}
-              </h1>
-             <span>
-              <h5 class="name text-center w-100">
-                <div class = 'w-70'>
-                  {{ registeredClinicAddress}}
-
-                  </div>
-              </h5>
-              </span>
-          </span>
-            </div> -->
         </div>
         <hr>
         <div style="clear: both;">
             <span class="label"><h3 class="text-center">{{::"REFERRAL_LETTER" | translate}}</h3></span>
         </div>
-
         <div style="float: right;" class="right">
             <span  class="label">{{::"DATE_LABEL" | translate}}</span>
             <span >{{today | date:'dd/MM/yyyy'}} </span>
@@ -252,16 +188,12 @@
         <div class="left">
             <span class="label"><p
                     class="text-left" style="white-space: pre-wrap;"><b>{{::"REFERRAL_LETTER_REFERRAL_TO" | translate}}</b> <br>{{::getReferredTo()}} </p></span>
-
         </div>
-
         <!-- <p class="text-left">{{::"REFERRAL_LETTER_NAME_OF_PATIENT" | translate}} {{patient.givenName}} {{patient.middleName}} {{patient.familyName}} {{::"REFERRAL_LETTER_AGE" | translate}} {{patient.age || '0'}} {{::"REFERRAL_LETTER_YEARS" | translate}} </p>
  -->
         <div class="text-left">
             <span class="label">
                <div class='row w-100 container space-between'>
-
-
                <!-- <div class='row'><div>{{::"REFERRAL_ADDRESS_LABEL" | translate}}&nbsp </div> <div> {{patientAddress.line1}},<br>{{patientAddress.line2}}.</div></div>
                 <span
                     class='align-top'> {{:: "REFERRAL_TEL_NO_LABEL" | translate}} {{patient.phoneNumber.value}}</span></div> -->
@@ -270,23 +202,16 @@
         <div class="left">
             <span class="label"><p class="text-left">{{::"REFERRAL_LETTER_NAME_OF_PATIENT" | translate}} {{patient.givenName}} {{patient.middleName}} {{patient.familyName}} {{::"REFERRAL_LETTER_AGE" | translate}} {{patient.age || '0'}} {{::"REFERRAL_LETTER_YEARS" | translate}} </p>
 </span>
-
         </div>
         <div class="left">
             <span class="label"><p
                     class="text-left">{{::"REFERRAL_LETTER_REASON_FOR_REFERRAL" | translate}} {{formFieldValues[2]['Reason for referral (text)']}}</p></span>
-
         </div>
-
         <div class="left">
             <span class="label"><p
                     class="text-left">{{::"REFERRAL_LETTER_C/o_(Remarks)" | translate}} {{formFieldValues[2]['C/o (Remarks)']}}</p></span>
-
         </div>
-        
-
-        
-         <div class="left" ng-if="formFieldValues[2]['Relevant clinical history']!=null">
+        <div class="left" ng-if="formFieldValues[2]['Relevant clinical history']!=null">
             <p class="text-left">{{::"REFERRAL_LETTER_RELEVANT_CLINICAL_HISTORY" | translate}} <span>{{formFieldValues[2]['Relevant clinical history']}}</span>
             </p>
         </div> 
@@ -296,9 +221,21 @@
         <div class="right">
             <span class="label"><p class="text-right">{{::"REFERRAL_SIGNATURE" | translate}}<span
                     class='fill_in_blank'></span></p></span>
-
         </div>
-        
+        <div class="float-right" style="clear: both;">
+	        <div class="left">
+	            <span class="signature"><span class="text-right"><b>Dr. &nbsp;{{doctorName}}</b></span></span>
+	        </div>
+	        <div class="left">
+	           <p class="signature"><span class="text-right">{{::"REG_NO_LABEL" | translate}} {{registrationNumber}}</span></p>
+	        </div>
+	        <div class="left">
+	            <span class="label"><span class="text-right">{{printCertificateLine1}}</span></span>
+	        </div>
+	        <div class="right">
+	            <span class="label"><span class="text-right">{{printCertificateLine2}}</span></span>
+	        </div>
+        </div>
     </div>
 </div>
 
@@ -313,19 +250,6 @@
                 <h1><img src="../images/visitPrintHeader.png" width="100%"
                        class="logo"/></h1>
             </div> </div>
-
-       <!--  <div class="left">  
-            <span><img src="/bahmni_config/openmrs/apps/registration/registrationCardLayout/images/bahmni-icon.png" style="width: 24mmm; height: 30mm; "/></span>
-        </div>
-        <div class="right"> 
-
-           <span><h1 style="text-align: center;">
-                     {{ "REGISTRATION_INSTITUTE_NAME_TEXT_KEY" | translate }}
-                   </h1>
-           <span><h5 style="text-align: center;">
-                     {{ "REGISTRATION_INSTITUTE_ADDRESS" | translate }}
-                
-                   </h5>           </span>      </span> -->
   <br>
         <div class="center">
          
@@ -336,16 +260,6 @@
    </div> 
 <br>
 <div class="row">
-        <!-- <div class="right" style="text-align: right;">
-            <span class="label">Date:</span>
-            <span>{{today | date:'dd/MM/yyyy'}} </span>
-            <span class="label">Time:</span>
-            <span>{{today | date:'HH:MM'}}
-        </div> -->         
-      <!--   <div class="left"> 
-            <span><img ng-src="{{patient.image}}" style="width: 20mm;  height: 20mm; float: left; "
-                             onerror="this.onerror=null;this.src='../images/blank.jpeg';"/></span>
-         </div>  -->   
          <div class="center">
         <div class="left">
             <span class="label"><b>Registration No:</b></span>
@@ -437,10 +351,7 @@ minor or is unable to sign)
 </div>
 
 <!-- form I and Form C -->
-
 <div id="Form l_and_Form C" class="no-print">
-
-
 <p><h1 style="text-align: center;">Form - I</p></h1>
 <p><h3 style="text-align: center;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (See Regulation 3) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (SECRET)</h3></p>
 <p>Name and Qualification of the Registered Medical Practitioner (in Block letters):</p>
@@ -497,6 +408,4 @@ minor or is unable to sign)
 <p>Date:</p>
 <p>LHTI / Signature of Patient</p>
 <p>&nbsp;</p>
-
-
 </div>

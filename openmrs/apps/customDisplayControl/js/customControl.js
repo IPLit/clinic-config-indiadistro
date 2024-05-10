@@ -118,7 +118,7 @@ angular.module('bahmni.common.displaycontrol.custom')
                 .error(function () {
 
                 });
-            var {formNames, printControls,  doctorRegistrationFieldValue, providerIdentifier, practitionerType, patientAddress, addressAndLocationAttributes} = $scope.printConstants;
+            var {formNames, printControls,  doctorRegistrationFieldValue, providerIdentifier, practitionerType, patientAddress, addressAndLocationAttributes, printCertificateLines} = $scope.printConstants;
 
             $scope.patientAddress = {line1:"",line2:""};
             $scope.printControl = printControls;
@@ -130,6 +130,8 @@ angular.module('bahmni.common.displaycontrol.custom')
             $scope.registeredClinicAddress = '';
             $scope.registrationNumber = '';
             $scope.doctorName = '';
+            $scope.printCertificateLine1 = '';
+            $scope.printCertificateLine2 = '';
             var buildAddress= function(regAddress,fieldValues){
                 var addressValue = '';
                 var count = 0;
@@ -270,9 +272,15 @@ angular.module('bahmni.common.displaycontrol.custom')
                    var doctor = personDetails.attributes.find(attribute => (attribute.display.includes($scope.printConstants.practitionerType) && attribute.display.includes($scope.printConstants.providerIdentifier)));
                    if (personDetails) {
                        if(doctor){
-                       $scope.doctorName = personDetails.person.display;
+                           $scope.doctorName = personDetails.person.display;
                        }
                       $scope.registrationNumber = getAttributeValue(personDetails.attributes, doctorRegistrationFieldValue);
+                      if (printCertificateLines && printCertificateLines.length > 0) {
+                          $scope.printCertificateLine1 = getAttributeValue(personDetails.attributes, printCertificateLines[0]);
+                      }
+                      if (printCertificateLines && printCertificateLines.length > 1) {
+                          $scope.printCertificateLine2 = getAttributeValue(personDetails.attributes, printCertificateLines[1]);
+                      }
                    }
                }
 
