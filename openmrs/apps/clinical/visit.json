@@ -9,7 +9,8 @@
             "headerUri": "/bahmni/images/visitPrintHeader.png",
             "forms": ["History and Examination", "consultation note"],
             "vitals": ["Systolic blood pressure", "Diastolic blood pressure", "Height (cm)", "Weight (kg)", "Temperature", "Arterial blood oxygen saturation (pulse oximeter)"],
-            "obsIgnoreList": ["Radiology", "Document", "Follow-up Condition", "Return visit date", "Reason for visit (text)"]
+            "obsIgnoreList": ["Radiology", "Document", "Follow-up Condition", "Return visit date", "Reason for visit (text)"],
+            "imageNoteName": "Image Note"
         },
         "defaultSections": true,
         "defaultSectionsExcludes": ["admissionDetails"],
@@ -84,7 +85,8 @@
             "headerUri": "/bahmni/images/visitPrintHeader.png",
             "forms": ["History and Examination", "consultation note"],
             "vitals": ["Systolic blood pressure", "Diastolic blood pressure", "Height (cm)", "Weight (kg)", "Temperature", "Arterial blood oxygen saturation (pulse oximeter)"],
-            "obsIgnoreList": ["Radiology", "Document", "Follow-up Condition", "Return visit date", "Reason for visit (text)"]
+            "obsIgnoreList": ["Radiology", "Document", "Follow-up Condition", "Return visit date", "Reason for visit (text)"],
+            "imageNoteName": "Image Note"
         },
         "sections": {
             "Patient Information": {
