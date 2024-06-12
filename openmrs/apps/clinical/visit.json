@@ -52,6 +52,26 @@
                     "conceptNames":[ ]
                 }
             },
+            "labOrders": {
+                "type": "labOrders",
+                "displayOrder": 4,
+                "config": {
+                    "translationKey": "VISIT_TITLE_LAB_ORDERS_KEY",
+                    "showChart": true,
+                    "showTable": false,
+                    "showOrders": true,
+                    "showNormalLabResults": false,
+                    "showCommentsExpanded": false,
+                    "showAccessionNotes": true,
+                    "numberOfVisits": 10,
+                    "showDetailsButton": false,
+                    "hideResultsColumn": false,
+                    "chartConfig": {
+                        "sortResultColumnsLatestFirst":true,
+                        "groupByPanel":true
+                    } 
+                }
+            },
             "prescriptions":{
                 "translationKey":"DASHBOARD_TITLE_PRESCRIPTIONS_KEY",
                 "type":"prescription",
@@ -114,8 +134,21 @@
                         "Weight (kg)",
                         "M/C Days"
                     ],
-                    "numberOfVisits": 1,
-                    "labConcepts": ""
+                    "numberOfVisits": 1
+                }
+            },
+            "consultationNotes":{
+                "type":"consultationNotes",
+                "translationKey":"DASHBOARD_TITLE_CONSULTATION_NOTES_KEY",
+                "displayOrder":2,
+                "config":{
+                    "conceptNames":[
+                        "Chief Complaint Data",
+                        "History of present illness",
+                        "Smoking status",
+                        "Consultation Note"
+                    ],
+                    "numberOfVisits":1
                 }
             },
             "conditions": {
