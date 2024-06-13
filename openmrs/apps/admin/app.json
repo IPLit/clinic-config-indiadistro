@@ -5,6 +5,9 @@
                 "id": "org.bahmni.admin.dashboard",
                 "description": "Bahmni Admin Page"
             }
-        ]
+        ],
+        "config" : {
+          "patientDocumentContainerName": "bahmni-std-cloud-package-patient-documents-1"
+        }
 
 }
