@@ -145,20 +145,6 @@
                     "numberOfVisits": 1
                 }
             },
-            "consultationNotes":{
-                "type":"consultationNotes",
-                "translationKey":"DASHBOARD_TITLE_CONSULTATION_NOTES_KEY",
-                "displayOrder":2,
-                "config":{
-                    "conceptNames":[
-                        "Chief Complaint Data",
-                        "History of present illness",
-                        "Smoking status",
-                        "Consultation Note"
-                    ],
-                    "numberOfVisits":1
-                }
-            },
             "conditions": {
                 "title": "Conditions",
                 "type": "conditionsList",
@@ -398,5 +384,5 @@
                 "Consultation"
             ]
         }
-    },
+    }
 }

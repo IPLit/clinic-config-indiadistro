@@ -25,6 +25,58 @@
     "order": 1,
     "requiredPrivilege": "app:clinical"
   },
+  "bahmniClinicalPatientsSearchActivePatientsForPrograms": {
+    "id": "bahmni.clinical.patients.search.activePatients",
+    "extensionPointId": "org.bahmni.patient.search",
+    "type": "config",
+    "extensionParams": {
+      "searchHandler": "emrapi.sqlSearch.activePatients",
+      "translationKey": "MODULE_LABEL_PROGRAMS_KEY",
+      "forwardUrl": "#/default/patient/{{patientUuid}}/consultationContext"
+    },
+    "label": "Active",
+    "order": 1,
+    "requiredPrivilege": "app:clinical"
+  },
+  "bahmniClinicalPatientsASearchActivePatientsByProvider": {
+    "id": "bahmni.clinical.patients.search.activePatientsByProvider",
+    "extensionPointId": "org.bahmni.patient.search",
+    "type": "config",
+    "extensionParams": {
+      "searchHandler": "emrapi.sqlSearch.activePatientsByProvider",
+      "translationKey": "MODULE_LABEL_MY_PATIENTS_KEY",
+      "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
+    },
+    "label": "Active",
+    "order": 2,
+    "requiredPrivilege": "app:clinical"
+  },
+  "bahmniClinicalPatientsSearchOPDActivePatientsByProvider": {
+    "id": "bahmni.clinical.patients.search.OPDActivePatientsByProvider",
+    "extensionPointId": "org.bahmni.patient.search",
+    "type": "config",
+    "extensionParams": {
+      "searchHandler": "emrapi.sqlSearch.activePatientsByProvider",
+      "translationKey": "MODULE_LABEL_OPD_1_KEY",
+      "forwardUrl": "#/default/patient/{{patientUuid}}/consultationContext"
+    },
+    "label": "OPD-1",
+    "order": 3,
+    "requiredPrivilege": "app:clinical"
+  },
+  "activePatientsByLocation": {
+    "id": "bahmni.clinical.patients.search.activePatientsByLocation",
+    "extensionPointId": "org.bahmni.patient.search",
+    "type": "config",
+    "extensionParams": {
+      "searchHandler": "emrapi.sqlSearch.activePatientsByLocation",
+      "translationKey": "MODULE_LABEL_ACTIVE_PATIENTS_BY_LOCATION",
+      "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
+    },
+    "label": "Active",
+    "order": 4,
+    "requiredPrivilege": "app:clinical"
+  },
   "observations": {
     "id": "bahmni.clinical.consultation.observations",
     "extensionPointId": "org.bahmni.clinical.consultation.board",
@@ -48,7 +100,17 @@
     "order": 2,
     "requiredPrivilege": "app:clinical:diagnosisTab"
   },
-  
+  "disposition": {
+    "id": "bahmni.clinical.consultation.disposition",
+    "extensionPointId": "org.bahmni.clinical.consultation.board",
+    "type": "link",
+    "label": "Disposition",
+    "translationKey":"DISPOSITION_BOARD_LABEL_KEY",
+    "url": "disposition",
+    "icon": "fa-user-md",
+    "order": 3,
+    "requiredPrivilege": "app:clinical:dispositionTab"
+  },
   "consultationSummary": {
     "id": "bahmni.clinical.consultation.summary",
     "extensionPointId": "org.bahmni.clinical.consultation.board",
@@ -101,6 +163,16 @@
     "label": "Follow up",
     "requiredPrivilege": "app:clinical"
   },
+  "bahmniClinicalConceptSetGroupObservationsDischargeSummary": {
+    "id": "bahmni.clinical.conceptSetGroup.observations.dischargeSummary",
+    "extensionPointId": "org.bahmni.clinical.conceptSetGroup.observations",
+    "type": "config",
+    "extensionParams": {
+      "conceptName": "Discharge Summary"
+    },
+    "order": 6,
+    "requiredPrivilege": "Discharge Summary"
+  },
   "bahmniClinicalBillingTreatment": {
     "id": "bahmni.clinical.billing.treatment",
     "extensionPointId": "org.bahmni.clinical.consultation.board",
@@ -125,6 +197,16 @@
     "icon": "icon-user-md",
     "order": 6,
     "requiredPrivilege": "app:clinical:ordersTab"
+  },
+  "bahmniClinicalConsultationBacteriology": {
+    "id": "bahmni.clinical.consultation.bacteriology",
+    "extensionPointId": "org.bahmni.clinical.consultation.board",
+    "type": "link",
+    "label": "Bacteriology",
+    "translationKey":"BACTERIOLOGY_BOARD_LABEL_KEY",
+    "url": "bacteriology",
+    "icon": "icon-user-md",
+    "order": 7,
+    "requiredPrivilege": "app:clinical:bacteriologyTab"
   }
-  
 }

@@ -41,6 +41,14 @@
           }
         ],
         "drugFormDefaults": {
+          "Ayurvedic": {
+            "doseUnits": "Teaspoon",
+            "route": "Oral"
+          },
+          "Capsule": {
+            "doseUnits": "Capsule(s)",
+            "route": "Oral"
+          },
           "Cream": {
             "route": "Topical"
           },
@@ -51,6 +59,10 @@
           "Drops": {
             "doseUnits": "Drop",
             "route": "Topical"
+          },
+          "Food Supplement": {
+            "doseUnits": "Unit(s)",
+            "route": "Oral"
           },
           "Enteric-coated tablet": {
             "doseUnits": "Tablet",
@@ -68,11 +80,24 @@
           "Inhalation powder": {
             "route": "Inhalation"
           },
+          "Granule": {
+            "doseUnits": "Unit(s)",
+            "route": "Oral"
+          },
+          "Inhaler": {
+            "doseUnits": "Puff(s)",
+            "route": "Inhalation"
+          },
           "Injection": {
+            "doseUnits": "mg",
             "route": "Intravenous"
           },
           "Jelly": {
             "route": "Topical"
+          },
+          "Liquid": {
+            "doseUnits": "ml",
+            "route": "Oral"
           },
           "Lotion": {
             "route": "Topical"
@@ -97,6 +122,14 @@
           "Powder": {
             "doseUnits": "mg",
             "route": "Topical"
+          },
+          "Spray": {
+            "doseUnits": "Puff(s)",
+            "route": "Nasal"
+          },
+          "Syrup": {
+            "doseUnits": "ml",
+            "route": "Oral"
           },
           "Powder for injection": {
             "route": "Intravenous"

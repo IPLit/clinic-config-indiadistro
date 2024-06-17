@@ -110,21 +110,6 @@
                     "excludeFrom": ["TB Program"]
                 }
             },
-            "patientContext": {
-        		"programAttributes": [
-            		"Id_Number",
-            		"Doctor",
-            		"Stage"
-        		],
-        		"personAttributes": [
-            		"class",
-            		"caste"
-        		],
-        		"additionalPatientIdentifiers": [
-           			"National ID"
-       		],
-        		"preferredIdentifier": "Id_Number"
-    	},
         "obsIgnoreList": [
             "REGISTRATION FEES",
             "COMMENTS",
@@ -141,7 +126,6 @@
         "allowOnlyCodedDiagnosis": false,
         "ignoredTabularViewHeadings": ["uuid","activeVisitUuid","hasBeenAdmitted","display","image","$$hashKey","birthDate","extraIdentifiers","personId","deathDate","addressFieldValue","dateCreated","customAttribute","patientProgramAttributeValue"],
         "preferExtraIdInSearchResults": true,
-        "defaultVisitType":"OPD",
         "identifierHeadings": ["identifier"],
         "conceptSetUI": {
             "Chief Complaint Data": {
