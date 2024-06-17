@@ -1,5 +1,7 @@
 # Bahmni Clinic configuration and data.
 
+This repository also holds the Bahmni Configurations for Bahmni Standard with CIEL dictionary for metadata.
+
 ### [![Bahmni Config](https://github.com/Bahmni/clinic-config/actions/workflows/build_upload.yml/badge.svg)](https://github.com/Bahmni/clinic-config/actions/workflows/build_upload.yml)
 
 This repo represents configuration for BahmniLite (more applicable for clinics).

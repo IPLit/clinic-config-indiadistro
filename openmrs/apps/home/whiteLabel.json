@@ -61,13 +61,6 @@
       "title": "Analytics",
       "logo": "/bahmni/images/analytics.png",
       "link": "/metabase"
-    },
-    {
-        "enabled": false,
-        "name": "dcm",
-        "title": "dcm4chee-web3",
-        "logo": "/bahmni/images/pac.png",
-        "link": "/dcm4chee-web3"
     }
   ]
 }

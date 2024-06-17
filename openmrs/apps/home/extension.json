@@ -9,7 +9,16 @@
     "order": 1,
     "requiredPrivilege": "app:registration"
   },
-
+  "programs": {
+    "id": "bahmni.programs",
+    "extensionPointId": "org.bahmni.home.dashboard",
+    "type": "link",
+    "translationKey": "MODULE_LABEL_PROGRAMS_KEY",
+    "url": "../clinical/#/programs/patient/search",
+    "icon": "icon-bahmni-program",
+    "order": 2,
+    "requiredPrivilege": "app:clinicalPrograms"
+  },
   "clinical": {
     "id": "bahmni.clinical",
     "extensionPointId": "org.bahmni.home.dashboard",
@@ -20,7 +29,27 @@
     "order": 2,
     "requiredPrivilege": "app:clinical"
   },
-
+  "bahmniIpd": {
+    "id": "bahmni.ipd",
+    "extensionPointId": "org.bahmni.home.dashboard",
+    "type": "link",
+    "translationKey": "MODULE_LABEL_BED_MANAGEMENT_KEY",
+    "label": "InPatient",
+    "url": "../bedmanagement/#/home",
+    "icon": "fa-bed",
+    "order": 7,
+    "requiredPrivilege": "app:adt"
+  },
+  "orders": {
+    "id": "bahmni.orders",
+    "extensionPointId": "org.bahmni.home.dashboard",
+    "type": "link",
+    "translationKey": "MODULE_LABEL_ORDERS_KEY",
+    "url": "../orders/#/search",
+    "icon": "icon-bahmni-orders",
+    "order": 10,
+    "requiredPrivilege": "app:orders"
+  },
   "reports": {
     "id": "bahmni.reports",
     "extensionPointId": "org.bahmni.home.dashboard",
@@ -31,7 +60,16 @@
     "order": 3,
     "requiredPrivilege": "app:reports"
   },
-
+  "bahmniOT": {
+    "id": "bahmni.ot",
+    "extensionPointId": "org.bahmni.home.dashboard",
+    "type": "link",
+    "translationKey": "Operation Theatre",
+    "url": "../ot/",
+    "icon": "fa-hospital-o",
+    "order": 9,
+    "requiredPrivilege": "app:ot"
+  },
   "implementerInterface": {
     "id": "bahmni.implementer.interface",
     "extensionPointId": "org.bahmni.home.dashboard",
@@ -123,6 +161,6 @@
     "icon": "fa fa-leanpub",
     "order": 12,
     "target": "_blank",
-    "requiredPrivilege": "app:admin"
+    "requiredPrivilege": "app:adminClaims"
   }
 }

@@ -60,9 +60,31 @@
                     "home",
                     "visit",
                     "registration",
+                    "inpatient",
+                    "enrolment",
                     "visitAttribute",
                     "labEntry"
                 ]
+            },
+            "tuberculosis": {
+                "title": "Tuberculosis Follow Up",
+                "type": "tuberculosis",
+                "hideEmptyDisplayControl": true,
+                "isObservation": true,
+                "dashboardConfig": {
+                    "conceptNames": [
+                        "Tuberculosis Followup Template"
+                    ],
+                    "numberOfVisits": 2
+                }
+            },
+            "disposition": {
+                "translationKey":"DASHBOARD_TITLE_DISPOSITION_KEY",
+                "showDetailsButton":true,
+                "hideEmptyDisplayControl": true,
+                "type":"disposition",
+                "numberOfVisits":1,
+                "displayOrder":7
             },
             "diagnosis": {
                 "translationKey": "DASHBOARD_TITLE_DIAGNOSIS_KEY",
@@ -103,8 +125,21 @@
                 "prescriptionPrint": {
                     "title": "Bahmni",
                     "header": "Prescriptions",
-                    "logo": "../images/bahmniLogo.png"
+                    "logo": "../images/visitPrintHeader.png"
                 }
+            },
+            "radiology":{
+                "translationKey":"DASHBOARD_TITLE_RADIOLOGY_KEY",
+                "type":"radiology",
+                "showDetailsButton":true,
+                "hideEmptyDisplayControl": true,
+                "displayOrder":5
+            },
+            "programs":{
+                "translationKey":"DASHBOARD_TITLE_PROGRAMS_KEY",
+                "type":"programs",
+                "hideEmptyDisplayControl": true,
+                "displayOrder":10
             },
             "radiologyOrders": {
                 "orderType": "Radiology Order",
@@ -112,8 +147,19 @@
                 "translationKey": "DASHBOARD_TITLE_RADIOLOGY_ORDERS_KEY",
                 "displayOrder": 12,
                 "dashboardConfig": {
-                    "conceptNames": [],
+                    "conceptNames": ["Summary"],
                     "numberOfVisits": 4
+                }
+            },
+            "pacs":{
+                "orderType":"Radiology Order",
+                "type":"pacsOrders",
+                "translationKey":"DASHBOARD_TITLE_PACS_KEY",
+                "displayOrder":8,
+                "hideEmptyDisplayControl": true,
+                "dashboardConfig":{
+                    "pacsImageUrl":"/oviyam2/oviyam?patientID={{patientID}}&accessionNumber={{orderNumber}}",
+                    "numberOfVisits":4
                 }
             },
             "labResults": {
@@ -144,6 +190,66 @@
                     }
                 }
             },
+            "bacteriologyResults":{
+                "translationKey":"DASHBOARD_TITLE_BACTERIOLOGY_RESULTS_KEY",
+                "type":"bacteriologyResultsControl",
+                "scope":"All",
+                "hideEmptyDisplayControl": true,
+                "orderType":"",
+                "dashboardConfig":{
+                    "conceptNames":[  
+                        "BACTERIOLOGY CONCEPT SET"
+                    ]
+                }
+            },
+            "gynaecology":{
+                "translationKey":"DASHBOARD_TITLE_GYNAECOLOGY_KEY",
+                "type":"gynaecology",
+                "isObservation":true,
+                "hideEmptyDisplayControl": true,
+                "displayOrder":15,
+                "dashboardConfig":{
+                    "conceptNames":[  
+                        "Gynaecology"
+                    ],
+                    "showDetailsButton":true,
+                    "numberOfVisits":2
+                },
+                "expandedViewConfig":{
+                    "conceptNames":[  
+                        "Gynaecology"
+                    ],
+                    "numberOfVisits":2,
+                    "showDetailsButton":true,
+                    "pivotTable":{
+
+                    }
+                }
+            },
+            "obstetrics":{
+                "translationKey":"DASHBOARD_TITLE_OBSTETRICS_KEY",
+                "type":"obstetrics",
+                "isObservation":true,
+                "hideEmptyDisplayControl": true,
+                "displayOrder":16,
+                "dashboardConfig":{
+                    "showDetailsButton":true,
+                    "conceptNames":[  
+                        "Obstetrics"
+                    ],
+                    "numberOfVisits":2
+                },
+                "expandedViewConfig":{
+                    "conceptNames":[  
+                        "Obstetrics"
+                    ],
+                    "numberOfVisits":2,
+                    "showDetailsButton":true,
+                    "pivotTable":{
+
+                    }
+                }
+            },
             "visits": {
                 "translationKey": "DASHBOARD_TITLE_VISITS_KEY",
                 "type": "visits",
@@ -153,6 +259,52 @@
                     "maximumNoOfVisits": 8,
                     "groupByVisits": true
                 }
+            },
+            "diabetes":{
+                "title":"Diabetes",
+                "templateName":"Diabetes Templates",
+                "type":"diseaseTemplate",
+                "hideEmptyDisplayControl": true,
+                "displayOrder":18,
+                "dashboardConfig":{
+                    "showOnly":[
+                    ]
+                },
+                "expandedViewConfig":{
+                    "showDetailsButton":true,
+                    "pivotTable":{
+                        "numberOfVisits":"15",
+                        "groupBy":"encounters",
+                        "obsConcepts":[  
+                            "Weight",
+                            "Height",
+                            "Systolic",
+                            "Diastolic",
+                            "Diabetes, Foot Exam",
+                            "Diabetes, Eye Exam"
+                        ],
+                        "drugConcepts":[  
+                            "Ipratropium Pressurised",
+                            "Garbhpal Rasa"
+                        ],
+                        "labConcepts":[  
+                            "RBS",
+                            "FBS",
+                            "PP2BS",
+                            "Hb1AC",
+                            "Creatinine",
+                            "Albumin",
+                            "Polymorph"
+                        ]
+                    }
+                }
+            },
+            "admissionDetails":{
+                "translationKey":"DASHBOARD_TITLE_ADMISSION_DETAILS_KEY",
+                "type":"admissionDetails",
+                "hideEmptyDisplayControl": true,
+                "displayOrder":19,
+                "showDetailsButton":true
             },
             "historyAndExaminations": {
                 "translationKey": "DASHBOARD_TITLE_HISTORY_AND_EXAMINATIONS_KEY",
@@ -185,6 +337,30 @@
                     "pivotTable": {}
                 },
                 "hideEmptyDisplayControl": true
+            },
+            "secondVitals":{
+                "translationKey":"DASHBOARD_TITLE_SECOND_VITALS_KEY",
+                "type":"second vitals",
+                "isObservation":true,
+                "hideEmptyDisplayControl": true,
+                "displayOrder":13,
+                "dashboardConfig":{
+                    "showDetailsButton":true,
+                    "conceptNames":[  
+                        "Second Vitals"
+                    ],
+                    "numberOfVisits":2
+                },
+                "expandedViewConfig":{
+                    "conceptNames":[  
+                        "Second Vitals"
+                    ],
+                    "numberOfVisits":2,
+                    "showDetailsButton":true,
+                    "pivotTable":{
+
+                    }
+                }
             },
             "patientAppointments": {
                 "type": "custom",
@@ -285,6 +461,203 @@
                         "Image Note"
                     ],
                     "numberOfVisits": 2
+                }
+            }
+        }
+    },
+    "trends":{
+        "translationKey":"DASHBOARD_TAB_TRENDS_KEY",
+        "maxRecentlyViewedPatients":10,
+        "sections":{
+            "patientInformation":{
+                "translationKey":"DASHBOARD_TITLE_PATIENT_INFORMATION_KEY",
+                "type":"patientInformation",
+                "patientAttributes": [],
+                "addressFields":[  
+                    "address1",
+                    "address2",
+                    "cityVillage",
+                    "countyDistrict"
+                ],
+                "displayOrder":0
+            },
+            "growthChart":{
+                "type":"observationGraph",
+                "translationKey": "DASHBOARD_TITLE_GROWTH_CHART",
+                "config":{
+                    "yAxisConcepts":[  
+                        "Weight"
+                    ],
+                    "referenceData":"growthChartReference.csv",
+                    "numberOfVisits":20
+                },
+                "displayOrder":1
+            },
+            "BP":{
+                "type":"observationGraph",
+                "translationKey": "DASHBOARD_TITLE_BLOOD_PRESSURE",
+                "config":{
+                    "yAxisConcepts":[  
+                        "Systolic Data",
+                        "Diastolic Data"
+                    ],
+                    "xAxisConcept":"observationDateTime",
+                    "numberOfVisits":10
+                },
+                "displayOrder":2
+            },
+            "weight/BMI":{
+                "type":"observationGraph",
+                "translationKey": "DASHBOARD_TITLE_WEIGHT_BMI",
+                "config":{
+                    "yAxisConcepts":[  
+                        "Weight",
+                        "BMI"
+                    ],
+                    "xAxisConcept":"observationDateTime",
+                    "numberOfVisits":10
+                },
+                "displayOrder":3
+            },
+            "diabetes/BloodSugar":{
+                "type":"observationGraph",
+                "translationKey": "DASHBOARD_TITLE_DIABETES_BLOOD_SUGAR",
+                "config":{
+                    "yAxisConcepts":[  
+                        "Blood Sugar Fasting",
+                        "Blood Sugar P.P"
+                    ],
+                    "xAxisConcept":"observationDateTime",
+                    "numberOfVisits":10
+                },
+                "displayOrder":4
+            },
+            "observationGraph":{
+                "type":"observationGraph",
+                "translationKey": "DASHBOARD_TITLE_PULSE",
+                "config":{
+                    "yAxisConcepts":[  
+                        "Pulse Data"
+                    ],
+                    "xAxisConcept":"observationDateTime",
+                    "numberOfVisits":10
+                },
+                "displayOrder":5
+            },
+            "diabetes":{
+                "title":"Diabetes",
+                "templateName":"Diabetes, Progress",
+                "type":"diseaseTemplate",
+                "dashboardConfig":{
+                    "showOnly":[  
+
+                    ]
+                },
+                "expandedViewConfig":{
+                    "showDetailsButton":true,
+                    "pivotTable":{
+                        "numberOfVisits":"10",
+                        "groupBy":"visits",
+                        "obsConcepts":[  
+                            "Diabetes, Blood Pressure",
+                            "Diabetes, A1C",
+                            "Diabetes, LDL",
+                            "Diabetes, Ulcers on Feet",
+                            "Blood Sugar Fasting",
+                            "Blood Sugar PP"
+                        ],
+                        "labConcepts":[  
+                            "RBS",
+                            "FBS",
+                            "PP2BS",
+                            "Hb1AC",
+                            "Creatinine",
+                            "Cholesterol"
+                        ]
+                    }
+                },
+                "displayOrder":6
+            }
+        }
+    },
+    "patientSummary":{
+        "translationKey":"DASHBOARD_TAB_PATIENT_SUMMARY_KEY",
+        "maxRecentlyViewedPatients":10,
+        "sections":{
+            "Bacteriology Concept Set":{
+                "displayType":"Full-Page",
+                "translationKey":"DASHBOARD_TITLE_BACTERIOLOGY_RESULTS_KEY",
+                "type":"obsToObsFlowSheet",
+                "dashboardConfig":{
+                    "numberOfVisits":1,
+                    "templateName":"BACTERIOLOGY CONCEPT SET",
+                    "groupByConcept":"Specimen Collection Date",
+                    "conceptNames":[  
+                        "Specimen Id"
+                    ]
+                },
+                "expandedViewConfig":{
+                    "templateName":"BACTERIOLOGY CONCEPT SET",
+                    "groupByConcept":"Specimen Collection Date"
+                }
+            },
+            "HistoryAndExamination":{
+                "type":"historyAndExamination",
+                "isObservation":true,
+                "displayType":"Full-Page",
+                "dashboardConfig":{
+                    "showGroupDateTime":false,
+                    "conceptNames":[  
+                        "Chief Complaint Data",
+                        "Examination Notes",
+                        "Smoking History",
+                        "Clief COmplaint Notes",
+                        "Blood Pressure"
+                    ]
+                },
+                "displayOrder":6,
+                "translationKey":"DASHBOARD_TITLE_HISTORY_AND_EXAMINATIONS_KEY"
+            },
+            "drugOther":{
+                "translationKey":"DASHBOARD_TITLE_TREATMENTS_KEY",
+                "type":"drugOrderDetails",
+                "displayType":"Full-Page",
+                "showDetailsButton":true,
+                "displayOrder":24,
+                "dashboardConfig":{
+                    "showOnlyActive":true,
+                    "drugConceptSet":"All Other Drugs"
+                }
+            },
+            "malaria":{
+                "title":"Malaria",
+                "type":"obsToObsFlowSheet",
+                "displayType":"Full-Page",
+                "displayOrder":26,
+                "dashboardConfig":{
+                    "groupByConcept":"Malaria, Treatment Start Date",
+                    "templateName":"Malaria",
+                    "conceptNames":[  
+                        "Malaria, Parents Name",
+                        "Malaria, drug regimen",
+                        "Malaria, Malaria Type",
+                        "Malaria, Source"
+                    ]
+                }
+            },
+            "Chronic Treatment Chart":{
+                "displayType":"Full-Page",
+                "title":"Chronic Treatment Chart",
+                "type":"chronicTreatmentChart",
+                "dashboardConfig":{
+                    "drugs":[  
+
+                    ]
+                },
+                "expandedViewConfig":{
+                    "drugs":[  
+
+                    ]
                 }
             }
         }
