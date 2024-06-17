@@ -18,5 +18,7 @@
   "REGISTRATION_SMOKING_INJURIOUS_TEXT_KEY": "Smoking & Tobacco chewing can cause Cancer, Heart disease and Asthma.",
   "REGISTRATION_INSTITUTE_REGISTERED_TEXT_KEY": "(Registered)",
   "CLINICAL_YEARS_TRANSLATION_KEY": "years",
-  "REGISTRATION_PRINT_WITH_BARCODE": "Bar<u>c</u>ode Print"
+  "REGISTRATION_PRINT_WITH_BARCODE": "Bar<u>c</u>ode Print",
+  "REGISTRATION_PRINT_STICKER_KEY": "Registration Card with QR Code",
+  "CLINIC_NAME":"Shree Clinic, Thane"
 }

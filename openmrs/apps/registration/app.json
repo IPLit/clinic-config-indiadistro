@@ -37,6 +37,11 @@
                 "translationKey": "Patient Feedback Form",
                 "templateUrl": "/bahmni_config/openmrs/apps/registration/consentFormsLayout/feedbackForm.html",
                 "shortcutKey": "p"
+            },
+            {
+                "translationKey": "REGISTRATION_PRINT__STICKER_KEY",
+                "templateUrl": "/bahmni_config/openmrs/apps/registration/registrationCardLayout/print-sticker.html",
+                "shortcutKey": "p"
             }
         ],
         "fieldValidation" : {
