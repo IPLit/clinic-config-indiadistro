@@ -11,6 +11,7 @@
     "allowVirtualConsultation": true,
     "minCharLengthToTriggerPatientSearch": 3,
     "enableSpecialities": true,
+    "maxAppointmentProviders": 4,
     "startOfWeek": "Monday",
     "calendarSlotDuration": "00:15",
     "calendarSlotLabelInterval": "01:00",
@@ -25,8 +26,6 @@
     "appointmentBookingMessage":"APPOINTMENT_BOOKING_MESSAGE",
     "recurringAppointmentBookingMessage": "RECURRING_APPOINTMENT_BOOKING_MESSAGE",
     "teleconsultationAppointmentBookingMessage": "TELECONSULTATION_APPOINTMENT_BOOKING_MESSAGE",
-    "enableAppointmentStatusOption": true,
-    "enableDetailedSummaryView": true,
     "colorsForAppointmentService": [
       "#006400",
       "#DC143C",
@@ -61,6 +60,8 @@
     "recurrence": {
       "defaultNumberOfOccurrences": 10
     },
-    "additionalInfoColumns": {"Language": "English"}
+    "additionalInfoColumns": {"Language": "English"},
+    "enableAppointmentStatusOption": true,
+    "enableDetailedSummaryView": true
   }
 }
