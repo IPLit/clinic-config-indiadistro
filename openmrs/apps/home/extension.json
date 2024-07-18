@@ -172,5 +172,15 @@
     "order": 12,
     "target": "_blank",
     "requiredPrivilege": "app:adminClaims"
+  },
+  "handnotes": {
+    "id": "bahmni.handnotes",
+    "extensionPointId": "org.bahmni.home.dashboard",
+    "type": "link",
+    "translationKey": "MODULE_LABEL_HANDNOTES_KEY",
+    "url": "../handnotes/",
+    "icon": "fa fa-pencil-square-o",
+    "order": 4,
+    "requiredPrivilege": "app:clinical"
   }
 }
