@@ -63,7 +63,8 @@
                     "inpatient",
                     "enrolment",
                     "visitAttribute",
-                    "labEntry"
+                    "labEntry",
+                    "ndhmHIU"
                 ]
             },
             "tuberculosis": {
