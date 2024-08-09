@@ -46,7 +46,7 @@
             "route": "Oral"
           },
           "Capsule": {
-            "doseUnits": "Capsule(s)",
+            "doseUnits": "Capsule",
             "route": "Oral"
           },
           "Cream": {
@@ -61,7 +61,7 @@
             "route": "Topical"
           },
           "Food Supplement": {
-            "doseUnits": "Unit(s)",
+            "doseUnits": "Unit",
             "route": "Oral"
           },
           "Enteric-coated tablet": {
@@ -81,11 +81,11 @@
             "route": "Inhalation"
           },
           "Granule": {
-            "doseUnits": "Unit(s)",
+            "doseUnits": "Unit",
             "route": "Oral"
           },
           "Inhaler": {
-            "doseUnits": "Puff(s)",
+            "doseUnits": "Puff",
             "route": "Inhalation"
           },
           "Injection": {
@@ -116,7 +116,7 @@
             "route": "Oral"
           },
           "Pessary": {
-            "doseUnits": "Unit(s)",
+            "doseUnits": "Unit",
             "route": "Per Vaginal"
           },
           "Powder": {
@@ -124,7 +124,7 @@
             "route": "Topical"
           },
           "Spray": {
-            "doseUnits": "Puff(s)",
+            "doseUnits": "Puff",
             "route": "Nasal"
           },
           "Syrup": {
@@ -162,7 +162,7 @@
           },
           "Solution": {
             "doseUnits": "ml",
-            "route": "Oral"
+            "route": "Topical"
           }
         }
       }

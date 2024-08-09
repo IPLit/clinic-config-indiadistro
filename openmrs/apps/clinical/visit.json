@@ -291,7 +291,7 @@
                 "displayOrder": 2,
                 "translationKey":"DISCHARGE_SUMMARY_AT_ADMISSION_KEY",
                 "config": {
-                    "conceptNames": ["WEIGHT"],
+                    "conceptNames": ["Weight (kg)"],
                     "scope": "initial"
                 }
             },
@@ -300,7 +300,7 @@
                 "displayOrder": 3,
                 "translationKey":"DISCHARGE_SUMMARY_AT_DISCHARGE_KEY",
                 "config": {
-                    "conceptNames": ["WEIGHT"],
+                    "conceptNames": ["Weight (kg)"],
                     "scope": "latest"
                 }
             },

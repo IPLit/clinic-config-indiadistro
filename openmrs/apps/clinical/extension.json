@@ -25,6 +25,19 @@
     "order": 1,
     "requiredPrivilege": "app:clinical"
   },
+  "bahmniClinicalPatientsCustomNotifications": {
+    "id": "bahmni.clinical.patients.custom.notifications",
+    "extensionPointId": "org.bahmni.patient.search",
+    "type": "config",
+    "extensionParams": {
+      "translationKey": "MODULE_LABEL_NOTIFICATIONS_KEY",
+      "templateUrl": "/bahmni_config/openmrs/apps/clinical/customQueues/notifications.html",
+      "view": "custom"
+    },
+    "label": "Notifications",
+    "order": 4,
+    "requiredPrivilege": "app:clinical"
+  },
   "bahmniClinicalPatientsSearchActivePatientsForPrograms": {
     "id": "bahmni.clinical.patients.search.activePatients",
     "extensionPointId": "org.bahmni.patient.search",
@@ -141,7 +154,7 @@
       "default": true
     },
     "order": 1,
-    "requiredPrivilege": "app:clinical"
+    "requiredPrivilege": "app:clinical:history"
   },
   "bahmniClinicalConceptSetGroupObservationsVitals": {
     "id": "bahmni.clinical.conceptSetGroup.observations.vitals",

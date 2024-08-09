@@ -21,6 +21,10 @@
                     "countyDistrict"
                 ]
             },
+            "allergies": {
+                "type":"allergies",
+                "displayOrder": 2
+            },
             "flowsheet": {
                 "type": "flowSheet",
                 "title": "Vitals Flow Sheet",
@@ -371,6 +375,20 @@
                     "template": "<patient-appointments-dashboard section='config' patient='patient'></patient-appointments-dashboard>"
                 }
             },
+            "procedureDisplayControl":{
+                "translationKey":"DASHBOARD_TITLE_PROCEDURE_DISPLAY_CONTROL_KEY",
+                "type":"ordersControl",
+                "orderType":"Procedure Order",
+                "showDetailsButton":true,
+                "displayOrder":21,
+                "dashboardConfig":{
+                    "conceptNames":[]
+                },
+                "expandedViewConfig":{
+                    "conceptNames":[],
+                    "showDetailsButton":true
+                }
+            },
             "nutritionalValues": {
                 "translationKey": "DASHBOARD_TITLE_NUTRITIONAL_VALUES_KEY",
                 "type": "vitals",
@@ -487,7 +505,7 @@
                 "translationKey": "DASHBOARD_TITLE_GROWTH_CHART",
                 "config":{
                     "yAxisConcepts":[  
-                        "Weight"
+                        "Weight (kg)"
                     ],
                     "referenceData":"growthChartReference.csv",
                     "numberOfVisits":20
@@ -499,8 +517,8 @@
                 "translationKey": "DASHBOARD_TITLE_BLOOD_PRESSURE",
                 "config":{
                     "yAxisConcepts":[  
-                        "Systolic Data",
-                        "Diastolic Data"
+                        "Systolic blood pressure",
+                        "Diastolic blood pressure"
                     ],
                     "xAxisConcept":"observationDateTime",
                     "numberOfVisits":10
@@ -512,7 +530,7 @@
                 "translationKey": "DASHBOARD_TITLE_WEIGHT_BMI",
                 "config":{
                     "yAxisConcepts":[  
-                        "Weight",
+                        "Weight (kg)",
                         "BMI"
                     ],
                     "xAxisConcept":"observationDateTime",
@@ -525,8 +543,8 @@
                 "translationKey": "DASHBOARD_TITLE_DIABETES_BLOOD_SUGAR",
                 "config":{
                     "yAxisConcepts":[  
-                        "Blood Sugar Fasting",
-                        "Blood Sugar P.P"
+                        "Fasting blood glucose measurement (mg/dL)",
+                        "Serum glucose"
                     ],
                     "xAxisConcept":"observationDateTime",
                     "numberOfVisits":10
@@ -538,7 +556,7 @@
                 "translationKey": "DASHBOARD_TITLE_PULSE",
                 "config":{
                     "yAxisConcepts":[  
-                        "Pulse Data"
+                        "Pulse"
                     ],
                     "xAxisConcept":"observationDateTime",
                     "numberOfVisits":10
@@ -637,6 +655,9 @@
                 "displayOrder":26,
                 "dashboardConfig":{
                     "groupByConcept":"Malaria, Treatment Start Date",
+                    "formNames": [
+                        "Malaria"
+                    ],
                     "templateName":"Malaria",
                     "conceptNames":[  
                         "Malaria, Parents Name",
