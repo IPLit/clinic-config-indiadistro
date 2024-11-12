@@ -31,8 +31,7 @@
                         "Respiratory rate",
                         "Arterial blood oxygen saturation (pulse oximeter)",
                         "Height (cm)",
-                        "Weight (kg)",
-                        "M/C Days"
+                        "Weight (kg)"
                     ],
                     "labConcepts": ""
                 }
@@ -141,8 +140,7 @@
                         "Respiratory rate",
                         "Arterial blood oxygen saturation (pulse oximeter)",
                         "Height (cm)",
-                        "Weight (kg)",
-                        "M/C Days"
+                        "Weight (kg)"
                     ],
                     "numberOfVisits": 1
                 }
