@@ -156,10 +156,10 @@
                     "numberOfVisits": 4
                 }
             },
-            "pacs":{
-                "orderType":"Radiology Order",
-                "type":"pacsOrders",
-                "translationKey":"DASHBOARD_TITLE_PACS_KEY",
+            "pacs": {
+                "orderType": "Radiology Order",
+                "type": "pacsOrders",
+                "translationKey": "DASHBOARD_TITLE_PACS_KEY",
                 "displayOrder":8,
                 "hideEmptyDisplayControl": true,
                 "dashboardConfig":{
@@ -381,6 +381,7 @@
                 "orderType":"Procedure Order",
                 "showDetailsButton":true,
                 "displayOrder":21,
+                "hideEmptyDisplayControl": true,
                 "dashboardConfig":{
                     "conceptNames":[]
                 },
@@ -654,16 +655,15 @@
                 "displayType":"Full-Page",
                 "displayOrder":26,
                 "dashboardConfig":{
-                    "groupByConcept":"Malaria, Treatment Start Date",
+                    "groupByConcept":"Treatment Start Date",
                     "formNames": [
                         "Malaria"
                     ],
-                    "templateName":"Malaria",
                     "conceptNames":[  
-                        "Malaria, Parents Name",
-                        "Malaria, drug regimen",
-                        "Malaria, Malaria Type",
-                        "Malaria, Source"
+                        "Rapid test for malaria",
+                        "Malaria risk",
+                        "Malaria, Source",
+                        "Problem severity"
                     ]
                 }
             },
