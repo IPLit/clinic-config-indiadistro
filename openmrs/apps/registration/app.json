@@ -49,35 +49,10 @@
         "readOnlyExtraIdentifiers": ["ABHA Number","ABHA Address"],
         "printOptions": [
             {
-                "translationKey": "REGISTRATION_PRINT_REG_CARD_KEY",
-                "templateUrl": "/bahmni_config/openmrs/apps/registration/registrationCardLayout/print.html",
-                "shortcutKey": "p"
-            },
-            {
                 "translationKey": "Patient Feedback Form",
                 "templateUrl": "/bahmni_config/openmrs/apps/registration/consentFormsLayout/feedbackForm.html",
                 "shortcutKey": "p"
-            },
-            {
-                "translationKey": "REGISTRATION_PRINT__STICKER_KEY",
-                "templateUrl": "/bahmni_config/openmrs/apps/registration/registrationCardLayout/print-sticker.html",
-                "shortcutKey": "p"
-            },
-            {
-                    "translationKey": "REGISTRATION_PRINT_REG_CARD_LOCAL_KEY",
-                    "templateUrl": "/bahmni_config/openmrs/apps/registration/registrationCardLayout/print_local.html",
-                    "shortcutKey": "l"
-                },
-                {
-                    "translationKey": "REGISTRATION_PRINT_SUPPLEMENTAL_PAPER",
-                    "templateUrl": "/bahmni_config/openmrs/apps/registration/supplementalPaperLayout/print.html",
-                    "shortcutKey": "r"
-                },
-                {
-                    "translationKey": "REGISTRATION_PRINT_WITH_BARCODE",
-                    "templateUrl": "/bahmni_config/openmrs/apps/registration/registrationCardLayout/printWithBarcode.html",
-                    "shortcutKey": "c"
-                }
+            }
         ],
         "fieldValidation" : {
             "email" : {"pattern" : "^(?=.{1,40}$)(([^<>()\\[\\]\\\\.,;:\\s@\"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,4})$", "errorMessage" : "Should be a valid email address"},
