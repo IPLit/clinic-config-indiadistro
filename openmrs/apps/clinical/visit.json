@@ -11,7 +11,8 @@
             "vitals": ["Systolic blood pressure", "Diastolic blood pressure", "Height (cm)", "Weight (kg)", "Temperature", "Arterial blood oxygen saturation (pulse oximeter)"],
             "obsIgnoreList": ["Radiology", "Document", "Follow-up Condition", "Return visit date", "Reason for visit (text)"],
             "imageNoteName": "Image Note",
-            "showFormName": false
+            "showFormName": false,
+            "showBorders": false
         },
         "defaultSections": true,
         "defaultSectionsExcludes": ["admissionDetails"],
@@ -115,7 +116,8 @@
             "vitals": ["Systolic blood pressure", "Diastolic blood pressure", "Height (cm)", "Weight (kg)", "Temperature", "Arterial blood oxygen saturation (pulse oximeter)"],
             "obsIgnoreList": ["Radiology", "Document", "Follow-up Condition", "Return visit date", "Reason for visit (text)"],
             "imageNoteName": "Image Note",
-            "showFormName": false
+            "showFormName": false,
+            "showBorders": false
         },
         "sections": {
             "Patient Information": {
