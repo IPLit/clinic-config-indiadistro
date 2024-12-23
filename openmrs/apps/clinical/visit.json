@@ -17,17 +17,18 @@
         "defaultSections": true,
         "defaultSectionsExcludes": ["admissionDetails"],
         "sections": {
-            "vitalsTable":{
-                "type": "vitalsTable",
+            "pivotTable":{
+                "type": "pivotTable",
                 "displayOrder": 0,
                 "title": "Vitals",
                 "config": {
+                    "groupBy": "encounters",
                     "showGroupDateTime": false,
                     "scope": "latest",
                     "obsConcepts": [
+                        "Pulse",
                         "Diastolic blood pressure",
                         "Systolic blood pressure",
-                        "Pulse",
                         "Temperature",
                         "Respiratory rate",
                         "Arterial blood oxygen saturation (pulse oximeter)",
@@ -323,7 +324,9 @@
                 "translationKey": "DISCHARGE_SUMMARY_CLINICAL_NOTES_KEY",
                 "config": {
                     "conceptNames": [
-                        "History and Examination Notes",
+                        "Consultation Note",
+                        "Lab Order Notes",
+                        "Radiology Notes",
                         "Discharge Summary",
                         "Lab Investigation Notes",
                         "Radiology Notes",

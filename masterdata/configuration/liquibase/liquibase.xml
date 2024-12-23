@@ -336,4 +336,34 @@
             1, now(), NULL, NULL, NULL, uuid());
         </sql>
     </changeSet>
+    <changeSet id="BAH-3951-202407051511" author="Sameera">
+        <comment> Retire dosing units custom concept </comment>
+        <sql>
+
+            UPDATE concept c
+            JOIN (
+                SELECT c.concept_id
+                FROM concept c
+                JOIN concept_name cn ON c.concept_id = cn.concept_id
+                WHERE cn.name IN ('Tablet', 'Capsule', 'ml', 'mg', 'Drop', 'IU', 'Tablespoon', 'Teaspoon', 'Unit(s)')
+                AND cn.concept_name_type = 'FULLY_SPECIFIED'
+            ) t ON c.concept_id = t.concept_id
+            SET c.retired = TRUE
+            WHERE c.version IS NULL;
+
+        </sql>
+    </changeSet>
+    <changeSet id="BAH-3992-reporting-age-group" author="Standard-Config">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT count(*) FROM reporting_age_group where report_group_name="All Ages";
+            </sqlCheck>
+        </preConditions>
+        <comment>Adding All Ages age group to reporting_age_group</comment>
+        <sql>
+            INSERT INTO reporting_age_group (name,report_group_name, min_years, min_days, max_years, max_days)
+            VALUES ('All', 'All Ages',0,0,200,0);
+        </sql>
+
+    </changeSet>
 </databaseChangeLog>
