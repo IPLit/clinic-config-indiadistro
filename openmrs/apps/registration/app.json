@@ -80,6 +80,7 @@
                 "Parent":"patient"
             },
         "getPreviousVisitData": true,
-        "previousVisitConceptNamesToPull": ["Notes"]
+        "previousVisitConceptNamesToPull": ["Notes"],
+        "filterBasedOnLocation": false
     }
 }
