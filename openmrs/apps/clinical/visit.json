@@ -157,6 +157,7 @@
             "diagnosis":{
                 "type":"diagnosis",
                 "displayOrder":3,
+                "translationKey": "DASHBOARD_TITLE_DIAGNOSIS_KEY",
                 "config": {
                     "translationKey": "DASHBOARD_TITLE_DIAGNOSIS_KEY",
                     "hideVisitDate": true,
@@ -170,7 +171,7 @@
                 "config": {
                     "translationKey": "VISIT_TITLE_LAB_ORDERS_KEY",
                     "showChart": true,
-                    "showTable": true,
+                    "showTable": false,
                     "showOrders": true,
                     "showNormalLabResults": true,
                     "showCommentsExpanded": true,
