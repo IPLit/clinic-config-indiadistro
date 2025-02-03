@@ -1,0 +1,58 @@
+{
+    "formJson" : {
+        "id" : 22,
+        "uuid" : "44163589-193e-4c3c-b6f6-664233fc2e15",
+        "name" : "Discharge Card",
+        "version" : "1",
+        "published" : true,
+        "auditInfo" : {
+            "creator" : {
+                "uuid" : "d7a669e7-5e07-11ef-8f7c-0242ac120002",
+                "display" : "superman",
+                "links" : [{
+                        "rel" : "self",
+                        "uri" : "http://vaishnavistaging.bahmni.in/openmrs/ws/rest/v1/user/d7a669e7-5e07-11ef-8f7c-0242ac120002",
+                        "resourceAlias" : "user"
+                    }
+                ]
+            },
+            "dateCreated" : "2025-01-10T12:22:54.000+0530",
+            "changedBy" : {
+                "uuid" : "d7a669e7-5e07-11ef-8f7c-0242ac120002",
+                "display" : "superman",
+                "links" : [{
+                        "rel" : "self",
+                        "uri" : "http://vaishnavistaging.bahmni.in/openmrs/ws/rest/v1/user/d7a669e7-5e07-11ef-8f7c-0242ac120002",
+                        "resourceAlias" : "user"
+                    }
+                ]
+            },
+            "dateChanged" : "2025-01-21T23:20:00.000+0530"
+        },
+        "resources" : [{
+                "value" : "{\"name\":\"Discharge Card\",\"id\":22,\"uuid\":\"44163589-193e-4c3c-b6f6-664233fc2e15\",\"defaultLocale\":\"en\",\"controls\":[{\"type\":\"obsControl\",\"label\":{\"translationKey\":\"DATE_OF_ADMISSION_1\",\"id\":\"1\",\"units\":\"\",\"type\":\"label\",\"value\":\"Date of Admission\"},\"properties\":{\"mandatory\":false,\"notes\":false,\"addMore\":false,\"hideLabel\":false,\"controlEvent\":false,\"location\":{\"column\":0,\"row\":0},\"allowFutureDates\":false},\"id\":\"1\",\"concept\":{\"name\":\"Date of Admission\",\"uuid\":\"db892a51-451c-4125-b729-58ecad50332c\",\"datatype\":\"Date\",\"conceptClass\":\"Misc\",\"conceptHandler\":null,\"answers\":[],\"properties\":{\"allowDecimal\":null}},\"units\":null,\"hiNormal\":null,\"lowNormal\":null,\"hiAbsolute\":null,\"lowAbsolute\":null},{\"type\":\"obsControl\",\"label\":{\"translationKey\":\"DATE_OF_DISCHARGE_2\",\"id\":\"2\",\"units\":\"\",\"type\":\"label\",\"value\":\"Date of Discharge\"},\"properties\":{\"mandatory\":false,\"notes\":false,\"addMore\":false,\"hideLabel\":false,\"controlEvent\":true,\"location\":{\"column\":0,\"row\":1},\"allowFutureDates\":false},\"id\":\"2\",\"concept\":{\"name\":\"Date of Discharge\",\"uuid\":\"294c38d7-348f-45d4-9e10-29988ca5e659\",\"datatype\":\"Date\",\"conceptClass\":\"Misc\",\"conceptHandler\":null,\"answers\":[],\"properties\":{\"allowDecimal\":null}},\"units\":null,\"hiNormal\":null,\"lowNormal\":null,\"hiAbsolute\":null,\"lowAbsolute\":null,\"events\":{\"onValueChange\":\"function validateDischargeDate(form) {\\n  var admissionDate = form.get('Date of Admission').getValue();\\n  var dischargeDate = form.get('Date of Discharge').getValue();\\n\\n  if (admissionDate && dischargeDate) {\\n    var admission = new Date(admissionDate);\\n    var discharge = new Date(dischargeDate);\\n\\n    if (discharge < admission) {\\n      form.get('Date of Discharge').setValue('');\\n      form.get('Error Message').setValue('Date of Discharge cannot be earlier than Date of Admission');\\n    } else {\\n      form.get('Error Message').setValue('');\\n    }\\n  } else {\\n    form.get('Error Message').setValue('');\\n  }\\n}\"}},{\"type\":\"obsControl\",\"label\":{\"translationKey\":\"DIAGNOSES_3\",\"id\":\"3\",\"units\":\"\",\"type\":\"label\",\"value\":\"Diagnoses\"},\"properties\":{\"mandatory\":false,\"notes\":false,\"addMore\":false,\"hideLabel\":false,\"controlEvent\":false,\"location\":{\"column\":0,\"row\":2}},\"id\":\"3\",\"concept\":{\"name\":\"Diagnoses\",\"uuid\":\"2fe4f691-9336-4b62-a8f9-757f27cefb2f\",\"datatype\":\"Text\",\"conceptClass\":\"Misc\",\"conceptHandler\":null,\"answers\":[],\"properties\":{\"allowDecimal\":null}},\"units\":null,\"hiNormal\":null,\"lowNormal\":null,\"hiAbsolute\":null,\"lowAbsolute\":null},{\"type\":\"obsControl\",\"label\":{\"translationKey\":\"ADVICE_ON_DISCHARGE_4\",\"id\":\"4\",\"units\":\"\",\"type\":\"label\",\"value\":\"Advice on Discharge\"},\"properties\":{\"mandatory\":false,\"notes\":false,\"addMore\":false,\"hideLabel\":false,\"controlEvent\":false,\"location\":{\"column\":0,\"row\":3}},\"id\":\"4\",\"concept\":{\"name\":\"Advice on Discharge\",\"uuid\":\"c1cae2e8-55c1-4881-b243-dd3e8669a02f\",\"datatype\":\"Text\",\"conceptClass\":\"Misc\",\"conceptHandler\":null,\"answers\":[],\"properties\":{\"allowDecimal\":null}},\"units\":null,\"hiNormal\":null,\"lowNormal\":null,\"hiAbsolute\":null,\"lowAbsolute\":null},{\"type\":\"obsControl\",\"label\":{\"translationKey\":\"FOLLOW-UP_6\",\"id\":\"6\",\"units\":\"\",\"type\":\"label\",\"value\":\"Follow-up\"},\"properties\":{\"mandatory\":false,\"notes\":false,\"addMore\":false,\"hideLabel\":false,\"controlEvent\":false,\"location\":{\"column\":0,\"row\":4}},\"id\":\"6\",\"concept\":{\"name\":\"Follow-up\",\"uuid\":\"0604c0ea-d07d-4a0b-adef-b0718d230775\",\"datatype\":\"Date\",\"conceptClass\":\"Misc\",\"conceptHandler\":null,\"answers\":[],\"properties\":{\"allowDecimal\":null}},\"units\":null,\"hiNormal\":null,\"lowNormal\":null,\"hiAbsolute\":null,\"lowAbsolute\":null},{\"type\":\"obsControl\",\"label\":{\"translationKey\":\"OPERATION_/_LABOUR_DETAILS_9\",\"id\":\"9\",\"units\":\"\",\"type\":\"label\",\"value\":\"Operation / Labour Details\"},\"properties\":{\"mandatory\":false,\"notes\":false,\"addMore\":false,\"hideLabel\":false,\"controlEvent\":false,\"location\":{\"column\":0,\"row\":5}},\"id\":\"9\",\"concept\":{\"name\":\"Operation / Labour Details\",\"uuid\":\"3709adfa-ac85-4e59-bc91-a64a38141d99\",\"datatype\":\"Text\",\"conceptClass\":\"Misc\",\"conceptHandler\":null,\"answers\":[],\"properties\":{\"allowDecimal\":null}},\"units\":null,\"hiNormal\":null,\"lowNormal\":null,\"hiAbsolute\":null,\"lowAbsolute\":null},{\"type\":\"obsControl\",\"label\":{\"translationKey\":\"TREATMENTS_10\",\"id\":\"10\",\"units\":\"\",\"type\":\"label\",\"value\":\"Treatments\"},\"properties\":{\"mandatory\":false,\"notes\":false,\"addMore\":false,\"hideLabel\":false,\"controlEvent\":false,\"location\":{\"column\":0,\"row\":6}},\"id\":\"10\",\"concept\":{\"name\":\"Treatments\",\"uuid\":\"7944776f-c4d9-4e21-ab2f-b153d6609924\",\"datatype\":\"Text\",\"conceptClass\":\"Misc\",\"conceptHandler\":null,\"answers\":[],\"properties\":{\"allowDecimal\":null}},\"units\":null,\"hiNormal\":null,\"lowNormal\":null,\"hiAbsolute\":null,\"lowAbsolute\":null}],\"events\":{\"onFormSave\":\"\",\"onFormInit\":\"\"},\"translationsUrl\":\"/openmrs/ws/rest/v1/bahmniie/form/translations\",\"referenceVersion\":0,\"referenceFormUuid\":\"44163589-193e-4c3c-b6f6-664233fc2e15\"}",
+                "dataType" : "org.bahmni.customdatatype.datatype.FileSystemStorageDatatype",
+                "uuid" : "65d3e71c-8c49-441d-9a2e-a0b4008a587c"
+            }
+        ]
+    },
+    "translations" : [{
+            "locale" : "en",
+            "labels" : {},
+            "concepts" : {
+                "DIAGNOSES_3" : "Diagnoses",
+                "DATE_OF_ADMISSION_1" : "Date of Admission",
+                "OPERATION_/_LABOUR_DETAILS_9" : "Operation / Labour Details",
+                "DATE_OF_DISCHARGE_2" : "Date of Discharge",
+                "ADVICE_ON_DISCHARGE_4" : "Advice on Discharge",
+                "FOLLOW-UP_6" : "Follow-up",
+                "TREATMENTS_10" : "Treatments"
+            },
+            "formName" : "Discharge Card",
+            "formUuid" : "null",
+            "version" : "1",
+            "referenceVersion" : "null",
+            "referenceFormUuid" : "null"
+        }
+    ]
+}

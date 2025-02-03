@@ -218,6 +218,9 @@
             },
             "Date of Operation" : {
                 "allowFutureDates": true
+            },
+            "Follow-up" : {
+                "allowFutureDates": true
             }
         },
         "visitPage": {
