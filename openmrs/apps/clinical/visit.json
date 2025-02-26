@@ -12,7 +12,8 @@
             "obsIgnoreList": ["Radiology", "Document", "Follow-up Condition", "Return visit date", "Reason for visit (text)"],
             "imageNoteName": "Image Note",
             "showFormName": false,
-            "showBorders": false
+            "showBorders": false,
+            "showLabResults": true
         },
         "defaultSections": true,
         "defaultSectionsExcludes": ["admissionDetails"],
@@ -118,7 +119,8 @@
             "obsIgnoreList": ["Radiology", "Document", "Follow-up Condition", "Return visit date", "Reason for visit (text)"],
             "imageNoteName": "Image Note",
             "showFormName": false,
-            "showBorders": false
+            "showBorders": false,
+            "showLabResults": true
         },
         "sections": {
             "Patient Information": {
