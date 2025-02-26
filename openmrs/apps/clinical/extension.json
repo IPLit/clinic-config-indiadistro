@@ -31,7 +31,7 @@
     "url": "disposition",
     "icon": "fa-user-md",
     "order": 3,
-    "requiredPrivilege": "app:clinical:dispositionTab"
+    "requiredPrivilege": "app:clinical:dispositionTab-toRemove"
   },
   "consultationSummary": {
     "id": "bahmni.clinical.consultation.summary",
@@ -79,7 +79,7 @@
     },
     "label": "Notifications",
     "order": 4,
-    "requiredPrivilege": "app:clinical"
+    "requiredPrivilege": "app:clinical-toRemove"
   },
   "bahmniClinicalPatientsSearchActivePatientsForPrograms": {
     "id": "bahmni.clinical.patients.search.activePatients",
@@ -92,7 +92,7 @@
     },
     "label": "Active",
     "order": 1,
-    "requiredPrivilege": "app:clinical"
+    "requiredPrivilege": "app:clinical-toRemove"
   },
   "bahmniClinicalPatientsASearchActivePatientsByProvider": {
     "id": "bahmni.clinical.patients.search.activePatientsByProvider",
@@ -105,7 +105,7 @@
     },
     "label": "Active",
     "order": 2,
-    "requiredPrivilege": "app:clinical"
+    "requiredPrivilege": "app:clinical-toRemove"
   },
   "bahmniClinicalPatientsSearchOPDActivePatientsByProvider": {
     "id": "bahmni.clinical.patients.search.OPDActivePatientsByProvider",
@@ -118,7 +118,7 @@
     },
     "label": "OPD-1",
     "order": 3,
-    "requiredPrivilege": "app:clinical"
+    "requiredPrivilege": "app:clinical-toRemove"
   },
   "activePatientsByLocation": {
     "id": "bahmni.clinical.patients.search.activePatientsByLocation",
@@ -131,7 +131,7 @@
     },
     "label": "Active",
     "order": 4,
-    "requiredPrivilege": "app:clinical"
+    "requiredPrivilege": "app:clinical-toRemove"
   },
   "bahmniClinicalPatientsSearchAllPatients": {
     "id": "bahmni.clinical.patients.search.allPatients",
@@ -214,7 +214,7 @@
               "Height (cm)",
               "Weight (kg)",
               "Body mass index",
-              "BMI STATUS"
+              "BMI Status"
             ],
             "scope": "latest",
             "showDetailsButton": true,
@@ -254,6 +254,6 @@
     "url": "bacteriology",
     "icon": "icon-user-md",
     "order": 7,
-    "requiredPrivilege": "app:clinical:bacteriologyTab"
+    "requiredPrivilege": "app:clinical:bacteriologyTab-toRemove"
   }
 }

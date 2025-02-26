@@ -13,7 +13,7 @@
             "imageNoteName": "Image Note",
             "showFormName": false,
             "showBorders": false,
-            "showLabResults": true
+            "showLabResults": false
         },
         "defaultSections": true,
         "defaultSectionsExcludes": ["admissionDetails"],
