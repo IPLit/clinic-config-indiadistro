@@ -7,7 +7,8 @@
             }
         ],
         "config" : {
-          "patientDocumentContainerName": "bahmni-std-cloud-package-patient-documents-1"
+          "patientDocumentContainerName": "bahmni-std-cloud-package-patient-documents-1",
+          "programName": "Surgery Plan"
         }
 
 }
