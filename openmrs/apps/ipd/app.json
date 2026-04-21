@@ -33,6 +33,7 @@
         },
         "hideStartNewVisitPopUp": false,
         "patientForwardUrl": "../bedmanagement/#/patient/{{patientUuid}}/visit/{{visitUuid}}/dashboard",
+        "filterWardsBasedOnLocation": false,
         "dashboard": {
             "translationKey": "DASHBOARD_TAB_GENERAL_KEY",
             "conceptName": "Adt Notes",
