@@ -15,7 +15,7 @@
       },
       "label": "Active Patients",
       "order": 1,
-      "requiredPrivilege": "app:admin"
+      "requiredPrivilege": "app:clinical"
   },
   "bahmniHandNotesPatientsSearchAllPatients": {
       "id": "bahmni.handnotes.patients.search.allPatients",
@@ -27,6 +27,6 @@
       },
       "label": "All patients",
       "order": 2,
-      "requiredPrivilege": "app:admin"
+      "requiredPrivilege": "app:clinical"
   }
 }
