@@ -163,7 +163,7 @@
     "requiredPrivilege": "app:abdm"
   },
   "claims": {
-    "id": "bahmni.claims",
+    "id": "bahmni.claim",
     "extensionPointId": "org.bahmni.home.dashboard",
     "type": "link",
     "translationKey": "MODULE_LABEL_CLAIMS_KEY",
@@ -182,5 +182,15 @@
     "icon": "fa fa-pencil-square-o",
     "order": 4,
     "requiredPrivilege": "app:clinical"
+  },
+  "claim": {
+    "id": "bahmni.claims",
+    "extensionPointId": "org.bahmni.home.dashboard",
+    "type": "link",
+    "translationKey": "MODULE_LABEL_CLAIMS_KEY",
+    "url": "../claims/",
+    "icon": "fa fa-pencil-square-o",
+    "order": 14,
+    "requiredPrivilege": "app:claims"
   }
 }
