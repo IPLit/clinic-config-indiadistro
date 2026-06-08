@@ -171,6 +171,11 @@
     "id": "bahmni.clinical.conceptSetGroup.observations.FollowUp",
     "extensionPointId": "org.bahmni.clinical.consultation.board",
     "type": "link",
+    "extensionParams": {
+      "formName": "Follow Up",
+      "type": "observation",
+      "isObservation": true
+    },
     "url": "follow-up/observations",
     "order": 8,
     "label": "Follow up",
