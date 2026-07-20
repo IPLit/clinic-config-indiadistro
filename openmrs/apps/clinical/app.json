@@ -28,6 +28,7 @@
         "enableLabOrderOptions":["Urgent", "NeedsPrint"],
         "allMedicinesInPrescriptionAvailableForIPD": true,
         "enableIPDFeature": true,
+        "enableFhirLabResults": true,
         "allergyControlConceptIdMap": {
             "medicationAllergenUuid": "162552AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
             "foodAllergenUuid": "162553AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
