@@ -2,6 +2,7 @@
     "general":{
         "translationKey": "DASHBOARD_TAB_GENERAL_KEY",
         "displayByDefault": true,
+        "share": true,
         "printing": {
             "title": "Bahmni",
             "header": "Visit",
