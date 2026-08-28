@@ -37,7 +37,7 @@
             "allergySeverityUuid": "160223AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
         },
         "showTextAsAbnormal": false,
-        "enableAiProcessing": false,
+        "enableAiProcessing": true,
         "enable24HourTimers": true,
         "drugChartScheduleFrequencies": [
             {
