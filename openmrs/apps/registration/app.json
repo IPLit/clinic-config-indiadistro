@@ -47,7 +47,8 @@
         "registrationMessage": "REGISTRATION_MESSAGE",
         "enableWhatsAppButton": true,
         "enableFaceRecognition": true,
-        "linkToCurrentPatient": true,
+        "linkAbhaToCurrentPatient": true,
+        "regSearchByGPSql": false,
         "readOnlyExtraIdentifiers": ["ABHA Number","ABHA Address"],
         "printOptions": [
             {
