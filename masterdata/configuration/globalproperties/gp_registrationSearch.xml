@@ -12,7 +12,7 @@
     p.gender AS gender,
     TIMESTAMPDIFF(YEAR, p.birthdate, CURDATE()) AS age,
     p.date_created, 
-    p.person_id as last_person_id  
+    p.person_id AS last_person_id 
 FROM person p 
 JOIN person_name pn 
     ON pn.person_id = p.person_id 
@@ -28,16 +28,16 @@ JOIN global_property gp
     ON gp.property = 'bahmni.primaryIdentifierType' 
    AND gp.property_value = pit.uuid
 JOIN location l 
-    ON l.uuid = ${identifiersourcelocation}
+    ON l.uuid = ${identifiersourcelocation} 
+JOIN person_attribute pa 
+    ON pa.person_id = p.person_id 
+   AND pa.voided = 0
 LEFT JOIN location_attribute_type lat 
     ON lat.name = 'IdentifierSourceName'
 LEFT JOIN location_attribute la 
     ON la.location_id = l.location_id 
    AND la.attribute_type_id = lat.location_attribute_type_id
    AND la.voided = 0
-LEFT JOIN person_attribute pa 
-    ON pa.person_id = p.person_id 
-   AND pa.voided = 0
 LEFT JOIN person_attribute_type pa_type 
     ON pa_type.person_attribute_type_id = pa.person_attribute_type_id 
    AND pa_type.name = 'phoneNumber'
@@ -51,9 +51,9 @@ WHERE p.voided = 0
   AND (
       ${name} IS NULL 
       OR TRIM(${name}) = '' 
-	  OR pn.given_name LIKE CASE WHEN '%' THEN CONCAT('%') ELSE CONCAT('%', TRIM(${name}), '%') END
-	  OR pn.middle_name LIKE CASE WHEN '%' THEN CONCAT('%') ELSE CONCAT('%', TRIM(${name}), '%') END
-	  OR pn.family_name LIKE CASE WHEN '%' THEN CONCAT('%') ELSE CONCAT('%', TRIM(${name}), '%') END
+	  OR pn.given_name LIKE CASE WHEN pn.given_name = '%' THEN '%' ELSE CONCAT('%', TRIM(${name}), '%') END
+	  OR pn.middle_name LIKE CASE WHEN pn.middle_name = '%' THEN '%' ELSE CONCAT('%', TRIM(${name}), '%') END
+	  OR pn.family_name LIKE CASE WHEN pn.family_name = '%' THEN '%' ELSE CONCAT('%', TRIM(${name}), '%') END
   )
   AND (
       ${identifier} IS NULL 
@@ -62,13 +62,13 @@ WHERE p.voided = 0
           SELECT 1 FROM patient_identifier all_pi 
           WHERE all_pi.patient_id = p.person_id 
             AND all_pi.voided = 0 
-            AND all_pi.identifier LIKE CONCAT('%', TRIM(${identifier}), '%')
+            AND all_pi.identifier LIKE CASE WHEN all_pi.identifier = '%' THEN '%' ELSE CONCAT('%', TRIM(${identifier}), '%') END
       )
   )
   AND (
         ${customAttribute} IS NULL 
         OR TRIM(${customAttribute}) = ''
-        OR pa.value LIKE CONCAT('%', TRIM(${customAttribute}), '%')
+		OR pa.value LIKE CASE WHEN pa.value = '%' THEN '%' ELSE CONCAT('%', TRIM(${customAttribute}), '%') END
     ) 
 ORDER BY p.date_created DESC LIMIT 50;</value>
     </globalProperty>
