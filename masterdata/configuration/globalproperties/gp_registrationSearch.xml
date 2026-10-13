@@ -2,76 +2,75 @@
   <globalProperties>
   	<globalProperty>
       <property>emrapi.sqlSearch.patientsByIdentifierSource</property>
-      <value>SELECT 
-    sub.uuid,
-    sub.identifier,
-    sub.givenName,
-    sub.middleName,
-    sub.familyName,
-    sub.phoneNumber,
-    sub.alternatePhoneNumber,
-    sub.gender,
-    sub.age,
-    sub.date_created
-FROM (
-    SELECT 
-        p.uuid, 
-        pi.identifier,
-        pn.given_name AS givenName, 
-        pn.middle_name AS middleName, 
-        pn.family_name AS familyName,
-        MAX(CASE WHEN pa_type.name = 'phoneNumber' THEN pa.value ELSE NULL END) AS phoneNumber,
-        MAX(CASE WHEN pa_type.name = 'alternatePhoneNumber' THEN pa.value ELSE NULL END) AS alternatePhoneNumber,
-        p.gender AS gender,
-        TIMESTAMPDIFF(YEAR, p.birthdate, CURDATE()) AS age,
-        p.date_created,
-        ROW_NUMBER() OVER (ORDER BY p.date_created DESC) AS row_num
-    FROM person p 
-    JOIN person_name pn 
-        ON pn.person_id = p.person_id 
-       AND pn.preferred = 1 
-       AND pn.voided = 0 
-    JOIN patient_identifier pi 
-        ON pi.patient_id = p.person_id 
-       AND pi.preferred = 1 
-       AND pi.voided = 0
-    JOIN patient_identifier_type pit 
-        ON pi.identifier_type = pit.patient_identifier_type_id
-    JOIN global_property gp 
-        ON gp.property = 'bahmni.primaryIdentifierType' 
-       AND gp.property_value = pit.uuid
-    JOIN location l 
-        ON l.uuid = ${identifiersourcelocation}
-    LEFT JOIN location_attribute_type lat 
-        ON lat.name = 'IdentifierSourceName'
-    LEFT JOIN location_attribute la 
-        ON la.location_id = l.location_id 
-       AND la.attribute_type_id = lat.location_attribute_type_id
-       AND la.voided = 0
-    LEFT JOIN person_attribute pa 
-        ON pa.person_id = p.person_id 
-       AND pa.voided = 0
-    LEFT JOIN person_attribute_type pa_type 
-        ON pa_type.person_attribute_type_id = pa.person_attribute_type_id 
-       AND pa_type.name IN ('phoneNumber', 'alternatePhoneNumber')
-    WHERE p.voided = 0
-      AND (la.value_reference IS NULL OR pi.identifier LIKE CONCAT(la.value_reference, '%'))
-      AND (
-	      (${name} is not null and ${name} != '' ) AND 
-          (pn.given_name LIKE CONCAT('%', ${name}, '%')
-          OR pn.middle_name LIKE CONCAT('%', ${name}, '%')
-          OR pn.family_name LIKE CONCAT('%', ${name}, '%'))
+      <value>SELECT DISTINCT 
+    p.uuid, 
+    pi.identifier,
+    pn.given_name AS givenName, 
+    pn.middle_name AS middleName, 
+    pn.family_name AS familyName,
+    pa.value AS phoneNumber,
+    p.gender AS gender,
+    TIMESTAMPDIFF(YEAR, p.birthdate, CURDATE()) AS age,
+    p.date_created, 
+    p.person_id as last_person_id  
+FROM person p 
+JOIN person_name pn 
+    ON pn.person_id = p.person_id 
+   AND pn.preferred = 1 
+   AND pn.voided = 0 
+JOIN patient_identifier pi 
+    ON pi.patient_id = p.person_id 
+   AND pi.preferred = 1 
+   AND pi.voided = 0
+JOIN patient_identifier_type pit 
+    ON pi.identifier_type = pit.patient_identifier_type_id
+JOIN global_property gp 
+    ON gp.property = 'bahmni.primaryIdentifierType' 
+   AND gp.property_value = pit.uuid
+JOIN location l 
+    ON l.uuid = ${identifiersourcelocation}
+LEFT JOIN location_attribute_type lat 
+    ON lat.name = 'IdentifierSourceName'
+LEFT JOIN location_attribute la 
+    ON la.location_id = l.location_id 
+   AND la.attribute_type_id = lat.location_attribute_type_id
+   AND la.voided = 0
+LEFT JOIN person_attribute pa 
+    ON pa.person_id = p.person_id 
+   AND pa.voided = 0
+LEFT JOIN person_attribute_type pa_type 
+    ON pa_type.person_attribute_type_id = pa.person_attribute_type_id 
+   AND pa_type.name = 'phoneNumber'
+WHERE p.voided = 0
+  AND (la.value_reference IS NULL OR pi.identifier LIKE CONCAT(la.value_reference, '%'))
+  AND (
+    ${last_person_id} IS NULL 
+    OR ${last_person_id} = '' 
+    OR p.person_id > ${last_person_id}
+  )
+  AND (
+      ${name} IS NULL 
+      OR TRIM(${name}) = '' 
+	  OR pn.given_name LIKE CASE WHEN '%' THEN CONCAT('%') ELSE CONCAT('%', TRIM(${name}), '%') END
+	  OR pn.middle_name LIKE CASE WHEN '%' THEN CONCAT('%') ELSE CONCAT('%', TRIM(${name}), '%') END
+	  OR pn.family_name LIKE CASE WHEN '%' THEN CONCAT('%') ELSE CONCAT('%', TRIM(${name}), '%') END
+  )
+  AND (
+      ${identifier} IS NULL 
+      OR TRIM(${identifier}) = '' 
+      OR EXISTS (
+          SELECT 1 FROM patient_identifier all_pi 
+          WHERE all_pi.patient_id = p.person_id 
+            AND all_pi.voided = 0 
+            AND all_pi.identifier LIKE CONCAT('%', TRIM(${identifier}), '%')
       )
-    GROUP BY 
-        p.uuid, 
-        pi.identifier, 
-        pn.given_name, 
-        pn.middle_name, 
-        pn.family_name, 
-        p.gender, 
-        p.birthdate, 
-        p.date_created
-) AS sub;</value>
+  )
+  AND (
+        ${customAttribute} IS NULL 
+        OR TRIM(${customAttribute}) = ''
+        OR pa.value LIKE CONCAT('%', TRIM(${customAttribute}), '%')
+    ) 
+ORDER BY p.date_created DESC LIMIT 50;</value>
     </globalProperty>
   </globalProperties>
 </config>
