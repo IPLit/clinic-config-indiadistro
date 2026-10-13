@@ -12,7 +12,7 @@
     p.gender AS gender,
     TIMESTAMPDIFF(YEAR, p.birthdate, CURDATE()) AS age,
     p.date_created, 
-    p.person_id AS last_person_id 
+    p.person_id AS lastPersonId 
 FROM person p 
 JOIN person_name pn 
     ON pn.person_id = p.person_id 
@@ -51,9 +51,9 @@ WHERE p.voided = 0
   AND (
       ${name} IS NULL 
       OR TRIM(${name}) = '' 
-	  OR pn.given_name LIKE CASE WHEN pn.given_name = '%' THEN '%' ELSE CONCAT('%', TRIM(${name}), '%') END
-	  OR pn.middle_name LIKE CASE WHEN pn.middle_name = '%' THEN '%' ELSE CONCAT('%', TRIM(${name}), '%') END
-	  OR pn.family_name LIKE CASE WHEN pn.family_name = '%' THEN '%' ELSE CONCAT('%', TRIM(${name}), '%') END
+	  OR pn.given_name LIKE CASE WHEN  TRIM(${name}) = '%' THEN '%' ELSE CONCAT('%', TRIM(${name}), '%') END
+	  OR pn.middle_name LIKE CASE WHEN TRIM(${name}) = '%' THEN '%' ELSE CONCAT('%', TRIM(${name}), '%') END
+	  OR pn.family_name LIKE CASE WHEN TRIM(${name}) = '%' THEN '%' ELSE CONCAT('%', TRIM(${name}), '%') END
   )
   AND (
       ${identifier} IS NULL 
@@ -62,13 +62,13 @@ WHERE p.voided = 0
           SELECT 1 FROM patient_identifier all_pi 
           WHERE all_pi.patient_id = p.person_id 
             AND all_pi.voided = 0 
-            AND all_pi.identifier LIKE CASE WHEN all_pi.identifier = '%' THEN '%' ELSE CONCAT('%', TRIM(${identifier}), '%') END
+            AND all_pi.identifier LIKE CASE WHEN TRIM(${identifier}) = '%' THEN '%' ELSE CONCAT('%', TRIM(${identifier}), '%') END
       )
   )
   AND (
         ${customAttribute} IS NULL 
         OR TRIM(${customAttribute}) = ''
-		OR pa.value LIKE CASE WHEN pa.value = '%' THEN '%' ELSE CONCAT('%', TRIM(${customAttribute}), '%') END
+		OR pa.value LIKE CASE WHEN TRIM(${customAttribute}) = '%' THEN '%' ELSE CONCAT('%', TRIM(${customAttribute}), '%') END
     ) 
 ORDER BY p.date_created DESC LIMIT 50;</value>
     </globalProperty>
